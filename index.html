@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes da Val - Elegância em Cada Fragrância</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function mostrarAlerta() {
+            alert("PRODUTO ADICIONADO AO CARRINHO COM SUCESSO!");
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Perfumes da Val</h1>
+            <p>Elegância e sofisticação em cada fragrância</p>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Produtos</a></li>
+                <li><a href="sobrenos.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="cart" class="cart">
+        <div class="cart-header">
+            <a href="carrinho.html" id="cart-icon">
+                <img id="sacola" src="sacola.png" alt="Sacola de Compras">
+            </a>
+            <p id="cart-title">Sua Sacola</p>
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+                <ul id="cart-items"></ul>
+                <p>Total: R$ <span id="cart-total">0.00</span></p>
+            </div>
+        </div>
+    </section>
+    
+    <main class="container">
+        <section id="products" class="products">
+            <h2>Nossos Produtos</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="malbectradicional.jpg" alt="Malbec Tradicional" class="product-image">
+                    <h3>Malbec Tradicional</h3>
+                    <p>Malbec é um perfume inspirado no universo dos vinhos123. Sua fragrância é marcada por sua originalidade e inovação1. O Malbec é um ícone da perfumaria no Brasil e em Portugal3</p>
+                    <p id="preçoperfume">R$ 99,90</p>
+                    <button class="add-to-cart" data-name="Malbec Tradicional" data-price="99.90" onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="quasevision.jpg" alt="Quasar Vision 100ml" class="product-image">
+                    <h3>Quasar Vision 100ml</h3>
+                    <p>Quasar Vision Desodorante Colônia 100ml é uma fragrância masculina fougère fresca do Boticário, com notas de mandarina, lavanda e cedro. Inspirada em homens modernos e dinâmicos, oferece frescor e energia para o dia a dia. Ideal para quem busca um aroma clássico com um toque contemporâneo.</p>
+                    <p id="preçoperfume">R$ 110,00</p>
+                    <button class="add-to-cart" data-name="Quasar Vision 100ml" data-price="110.90" onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                  <div class="product">
+                    <img src="perfume3.jpg" alt="Perfume Cítrico" class="product-image">
+                    <h3>Perfume Cítrico</h3>
+                    <p id="preçoperfume">Frescor e energia para o seu dia a dia.</p>
+                    <p>R$ 89,90</p>
+                    <button class="add-to-cart" data-name="Perfume Cítrico" data-price="89.90">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cart = [];
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+    
+            document.querySelectorAll(".add-to-cart").forEach(button => {
+                button.addEventListener("click", () => {
+                    const name = button.getAttribute("data-name");
+                    const price = parseFloat(button.getAttribute("data-price"));
+                        cart.push({ name, price });
+                    updateCart();
+                    saveCartToLocalStorage();
+                });
+            });
+                function updateCart() {
+                cartItems.innerHTML = "";
+    
+                let total = 0;
+    
+                cart.forEach((item, index) => {
+                    total += item.price;
+                    const li = document.createElement("li");
+                    li.textContent = `${item.name} - R$ ${item.price.toFixed(2)}`;
+    
+                    const removeButton = document.createElement("button");
+                    removeButton.textContent = "Remover";
+                    removeButton.addEventListener("click", () => {
+                        cart.splice(index, 1);
+                        updateCart();  
+                        saveCartToLocalStorage();
+                    });
+    
+                    li.appendChild(removeButton);
+                    cartItems.appendChild(li);
+                });
+    
+                cartTotal.textContent = total.toFixed(2);
+            }
+
+            function saveCartToLocalStorage() {
+                localStorage.setItem("cart", JSON.stringify(cart));
+            }
+
+            function loadCartFromLocalStorage() {
+                const storedCart = JSON.parse(localStorage.getItem("cart"));
+                if (storedCart) {
+                    cart.push(...storedCart);
+                    updateCart();
+                }
+            }
+
+            loadCartFromLocalStorage();
+        });
+    </script>
+</body>
+</html>
