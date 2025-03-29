@@ -72,17 +72,21 @@
     <script>
         document.getElementById("whatsapp-button").addEventListener("click", function() {
             let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-            let cartMessage = "Olá! tudo bem? Meu pedido no PERFUMES DA VAL é:     \n";
+            let cartMessage = "Olá! Tudo bem?\n\n";
+            cartMessage += "Por favor, preencha as informações abaixo para finalizar seu pedido:\n\n";
+            cartMessage += "*Seu Nome:* [Digite aqui]\n";
+            cartMessage += "*Endereço:* [Digite aqui]\n";
+            cartMessage += "*Forma de Pagamento:* [Digite aqui]\n\n";
+            cartMessage += "*Resumo do Pedido:*\n\n";
 
             cartItems.forEach(item => {
-                cartMessage += `${item.name} - R$ ${item.price.toFixed(2)}\n`;
+                cartMessage += `- ${item.name} - R$ ${item.price.toFixed(2)}\n`;
             });
+
+            cartMessage += `\n*Total:* R$ ${cartItems.reduce((total, item) => total + item.price, 0).toFixed(2)}\n\n`;
+            cartMessage += "Obrigado por escolher *PERFUMES DA VAL*! Se precisar de algo, estamos aqui para ajudar.";
     
-            cartMessage += `\nTotal: R$ ${cartItems.reduce((total, item) => total + item.price, 0).toFixed(2)}`;
-    
-            let whatsappLink = `https://wa.me/557591305599?text=${encodeURIComponent(cartMessage)}`;
-            
-            window.open(whatsappLink, "_blank");
+            let whatsappLink = `https://wa.me/557591305599?text=${encodeURIComponent(cartMessage)}`; window.open(whatsappLink, "_blank");
         });
     </script>
 </body>
