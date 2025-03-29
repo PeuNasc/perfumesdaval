@@ -62,7 +62,8 @@ body {
     color: #ff4d6d;
     transform: scale(1.1);
 }
-    .footer {
+
+.footer {
     background-color: #ff85a2;
     color: white;
     text-align: center;
@@ -72,17 +73,18 @@ body {
 
 .footer p {
     margin: 0;
+    font-size: medium;
 }
 
 .footer a {
     color: #ffd7e3;
     text-decoration: none;
+    font-size: larger;
 }
 
 .footer a:hover {
     text-decoration: underline;
 }
-
 
 #sacola{
     height: 50px;
@@ -281,3 +283,48 @@ body {
     margin-top: 1rem;
     color: #ffd7e3;
 }
+
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .cart {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    #cart-icon img {
+        height: 40px;
+    }
+
+    #cart-title {
+        font-size: 1.2rem;
+    }
+
+    .about {
+        padding: 1.5rem;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .footer {
+        padding: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    #sacola {
+        height: 40px;
+    }
+}
+

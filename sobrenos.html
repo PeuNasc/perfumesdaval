@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfumes da Val - Elegância em Cada Fragrância</title>
+    <title>Perfumes da Val</title>
+    <link rel="icon" href="imagemaba.png" type="image/icone">
     <link rel="stylesheet" href="stylesobrenos.css">
 </head>
 <body>
@@ -34,8 +35,34 @@
     </section>
     <section id="about" class="about">
         <h2>Sobre Nós</h2>
-        <p>Perfumes da Val é uma microempresa apaixonada por criar fragrâncias que inspiram confiança e estilo. Cada perfume é cuidadosamente selecionado para garantir qualidade e exclusividade aos nossos clientes.</p>
+        <p>
+            Na <strong>Perfumes da Val</strong>, acreditamos que uma fragrância vai além do aroma; ela é uma extensão da sua personalidade, um convite para criar memórias inesquecíveis e marcar presença com estilo e confiança. Somos uma microempresa apaixonada pelo universo das fragrâncias, dedicada a trazer o que há de melhor para você.  
+            <br>
+            <br>
+            Cada perfume é cuidadosamente selecionado com atenção aos mínimos detalhes, prezando por qualidade, exclusividade e sofisticação. Nosso compromisso é oferecer produtos que realcem sua essência única, seja para o dia a dia ou para ocasiões especiais.  
+            <br>
+            <br>
+            Mais do que vender perfumes, queremos proporcionar experiências que transformem pequenos momentos em grandes histórias. Aqui, você encontra mais do que aromas, encontra inspiração e um toque de elegância em cada escolha. 💖✨  
+            <br>
+            <br>
+            Seja bem-vindo à <strong>Perfumes da Val</strong>, onde cada fragrância é um convite para expressar o melhor de você!</p>
     </section>
+
+    <footer class="footer">
+        <section id="contact" class="contact">
+            <p><strong>Gostou dos nosso Produtos mas ainda tem dúvidas? Entre em contato para mais informações!</strong></p>
+            <br>
+            <p id="tipodecontato"><strong>Email: </strong></p>
+            <p><a id="zapemail" href="mailto:valdinacia@gmail.com">valdinacia@gmail.com</a></p>
+            <br>
+            <p id="tipodecontato"><strong>WhatsApp:</strong></p>
+            <a id="zapemail" href="https://wa.me/557591305599?text">(75) 99130-5599</a>
+            <br>
+            <br>
+            <p>&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
+        </section>
+    </footer>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const cart = [];
@@ -67,7 +94,7 @@
                     removeButton.textContent = "Remover";
                     removeButton.addEventListener("click", () => {
                         cart.splice(index, 1);
-                        updateCart(); 
+                        updateCart();  
                         saveCartToLocalStorage();
                     });
     

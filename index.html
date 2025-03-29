@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfumes da Val - Elegância em Cada Fragrância</title>
+    <title>Perfumes da Val</title>
+    <link rel="icon" href="imagemaba.png" type="image/icone">
     <link rel="stylesheet" href="style.css">
     <script>
         function mostrarAlerta() {
@@ -45,10 +46,11 @@
                 <div class="product">
                     <img src="malbectradicional.jpg" alt="Malbec Tradicional" class="product-image">
                     <h3>Malbec Tradicional</h3>
-                    <p>Malbec é um perfume inspirado no universo dos vinhos123. Sua fragrância é marcada por sua originalidade e inovação1. O Malbec é um ícone da perfumaria no Brasil e em Portugal3</p>
+                    <p>Descubra a intensidade e a sofisticação do <strong>Malbec Tradicional!</strong> Uma fragrância marcante com notas amadeiradas e envolventes, inspirada no processo exclusivo de maturação em barris de carvalho. Perfeito para homens autênticos e confiantes. 🍷✨</p>
                     <p id="preçoperfume">R$ 99,90</p>
                     <button class="add-to-cart" data-name="Malbec Tradicional" data-price="99.90" onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
                 </div>
+
                 <div class="product">
                     <img src="quasevision.jpg" alt="Quasar Vision 100ml" class="product-image">
                     <h3>Quasar Vision 100ml</h3>
@@ -56,19 +58,55 @@
                     <p id="preçoperfume">R$ 110,00</p>
                     <button class="add-to-cart" data-name="Quasar Vision 100ml" data-price="110.90" onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
                 </div>
-                  <div class="product">
-                    <img src="perfume3.jpg" alt="Perfume Cítrico" class="product-image">
-                    <h3>Perfume Cítrico</h3>
-                    <p id="preçoperfume">Frescor e energia para o seu dia a dia.</p>
-                    <p>R$ 89,90</p>
-                    <button class="add-to-cart" data-name="Perfume Cítrico" data-price="89.90">Adicionar ao Carrinho</button>
+
+                <div class="product">
+                    <img src="iliaser50ml.jpg" alt="Ilia" class="product-image">
+                    <h3>Ilía Ser 50ml</h3>
+                    <p>Descubra o encanto do <strong>Iliá Ser Desodorante Colônia 50ml!</strong> Uma fragrância que celebra a força e a delicadeza feminina, com notas florais sofisticadas e um toque amadeirado envolvente. Perfeito para quem quer deixar sua marca com elegância e autenticidade. 🌸✨</p>
+                    <p id="preçoperfume">R$ 129,90</p>
+                    <button class="add-to-cart" data-name="Ilía Ser 50ml" data-price="129.90" onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="glamoursecretsblack.jpg" alt="Glamour Secrets Black 75ml" class="product-image">
+                    <h3>Glamour Secrets Black Desodorante Colônia 75ml</h3>
+                    <p>Encante-se com o <strong>Glamour Secrets Black Desodorante Colônia 75ml!</strong> Uma fragrância sofisticada e marcante, que combina o frescor das frutas, a elegância das flores e a doçura irresistível da baunilha. Perfeita para momentos especiais, este perfume vai te acompanhar em todos os seus melhores momentos. 💕✨</p>
+                    <p id="preçoperfume">R$ 174,90</p>
+                    <button class="add-to-cart" data-name="Glamour Secrets Black 75ml" data-price="174.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
+        <section id="contact" class="contact">
+            <p><strong>Gostou dos nosso Produtos mas ainda tem dúvidas? Entre em contato para mais informações!</strong></p>
+            <br>
+            <p id="tipodecontato"><strong>Email: </strong></p>
+            <p><a id="zapemail" href="mailto:valdinacia@gmail.com">valdinacia@gmail.com</a></p>
+            <br>
+            <p id="tipodecontato"><strong>WhatsApp:</strong></p>
+            <a id="zapemail" href="https://wa.me/557591305599?text">(75) 99130-5599</a>
+            <br>
+            <br>
+            <p>&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
+        </section>
     </footer>
 
     <script>
@@ -81,12 +119,14 @@
                 button.addEventListener("click", () => {
                     const name = button.getAttribute("data-name");
                     const price = parseFloat(button.getAttribute("data-price"));
-                        cart.push({ name, price });
+    
+                    cart.push({ name, price });
                     updateCart();
                     saveCartToLocalStorage();
                 });
             });
-                function updateCart() {
+    
+            function updateCart() {
                 cartItems.innerHTML = "";
     
                 let total = 0;

@@ -174,3 +174,26 @@ body {
     margin-top: 1rem;
     color: #ffd7e3;
 }
+
+.footer {
+    background-color: #ff85a2;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: larger;
+}
+
+.footer a {
+    color: #ffd7e3;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
