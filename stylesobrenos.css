@@ -1,34 +1,46 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;;
     margin: 0;
     padding: 0;
     background-color: #fff5f8;
     color: #333;
 }
 
-.header {
-    background: linear-gradient(90deg, #ff85a2, #ff4d6d);
-    color: white;
-    padding: 2rem 1rem;
+#sobrenostitulo{
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: xx-large;
+}
+
+
+.header {
+    background-color: #ff4d6d;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .header-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: 0;
-    font-family: 'Georgia', serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: Miss Fajardose; 
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
 }
 
 .header-content p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-top: 0.5rem;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Lora', serif; 
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
 }
 
+
 .navbar {
-    background-color: #ff4d6d;
+    background-color: #e45b74;
     padding: 1rem 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -43,10 +55,6 @@ body {
     gap: 1.5rem;
 }
 
-.nav-links li {
-    display: inline;
-}
-
 .nav-links a {
     color: white;
     font-size: 1rem;
@@ -57,41 +65,21 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.nav-links a:hover {
-    background-color: #ffb3c7;
-    color: #ff4d6d;
-    transform: scale(1.1);
-}
 
-.footer {
-    background-color: #ff85a2;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-}
-
-.footer p {
-    margin: 0;
-    font-size: medium;
-}
-
-.footer a {
-    color: #ffd7e3;
-    text-decoration: none;
-    font-size: larger;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
 
 #sacola{
-    height: 50px;
+    color: white;
+    background-color: #c4304b;
+    border: rgb(82, 67, 67);
+    border-radius: 15px;
+    margin-right: 10px;
+    height: 45px;
     float: center;
+    
 }
 #sacola:hover{
-    height: 60px;
+    background-color: #fa033d;
+    height: 45px;
     float: center;
 }
 #sacola:active{
@@ -182,24 +170,42 @@ body {
 }
 
 .footer {
-    background-color: #ff85a2;
+    background-color: #ff4d6d; 
     color: white;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 2rem 1rem; 
+    font-size: 1rem; 
+    border-top: 3px solid #ffd7e3; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
 
 .footer p {
     margin: 0;
+    font-size: 1.1rem; 
+    font-weight: 300;
+    letter-spacing: 0.5px; 
 }
 
+
 .footer a {
-    color: #ffd7e3;
+    color: #ffd7e3; 
     text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500; 
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
+
 
 .footer a:hover {
     text-decoration: underline;
+    color: #fff; 
+    transform: scale(1.1); 
+}
+
+
+.footer:hover {
+    background-color: #ff3366;
 }
 
 

@@ -18,29 +18,49 @@
         <p>Total: R$ <span id="cart-total">0.00</span></p>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
-    </footer>
-
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const cart = [];
             const cartItems = document.getElementById("cart-items");
             const cartTotal = document.getElementById("cart-total");
 
+            document.querySelectorAll(".add-to-cart").forEach(button => {
+                button.addEventListener("click", () => {
+                    const name = button.getAttribute("data-name");
+                    const price = parseFloat(button.getAttribute("data-price"));
+
+                    const existingItem = cart.find(item => item.name === name);
+
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cart.push({ name, price, quantity: 1 });
+                    }
+
+                    updateCart();
+                    saveCartToLocalStorage();
+                });
+            });
+
             function updateCart() {
                 cartItems.innerHTML = "";
+
                 let total = 0;
 
                 cart.forEach((item, index) => {
-                    total += item.price;
+                    total += item.price * item.quantity;
                     const li = document.createElement("li");
-                    li.textContent = `${item.name} - R$ ${item.price.toFixed(2)}`;
+                    li.textContent = `${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`;
 
                     const removeButton = document.createElement("button");
                     removeButton.textContent = "Remover";
                     removeButton.addEventListener("click", () => {
-                        cart.splice(index, 1);
+                        if (item.quantity > 1) {
+                            item.quantity -= 1;
+                        } else {
+                            cart.splice(index, 1);
+                        }
+
                         updateCart();
                         saveCartToLocalStorage();
                     });
@@ -52,10 +72,14 @@
                 cartTotal.textContent = total.toFixed(2);
             }
 
+            function saveCartToLocalStorage() {
+                localStorage.setItem("cart", JSON.stringify(cart));
+            }
+
             function loadCartFromLocalStorage() {
                 const storedCart = JSON.parse(localStorage.getItem("cart"));
                 if (storedCart) {
-                    cart.push(...storedCart);
+                    storedCart.forEach(item => cart.push(item));
                     updateCart();
                 }
             }
@@ -63,12 +87,13 @@
             loadCartFromLocalStorage();
         });
     </script>
+
     <section id="checkout">
         <button id="whatsapp-button" class="whatsapp-btn">
             Enviar Pedido para o WhatsApp 🛒
         </button>
     </section>
-    
+
     <script>
         document.getElementById("whatsapp-button").addEventListener("click", function() {
             let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
@@ -80,14 +105,20 @@
             cartMessage += "*Resumo do Pedido:*\n\n";
 
             cartItems.forEach(item => {
-                cartMessage += `- ${item.name} - R$ ${item.price.toFixed(2)}\n`;
+                cartMessage += `- ${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
             });
 
-            cartMessage += `\n*Total:* R$ ${cartItems.reduce((total, item) => total + item.price, 0).toFixed(2)}\n\n`;
+            cartMessage += `\n*Total:* R$ ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}\n\n`;
             cartMessage += "Obrigado por escolher *PERFUMES DA VAL*! Se precisar de algo, estamos aqui para ajudar.";
-    
-            let whatsappLink = `https://wa.me/557591305599?text=${encodeURIComponent(cartMessage)}`; window.open(whatsappLink, "_blank");
+
+            let whatsappLink = `https://wa.me/557591305599?text=${encodeURIComponent(cartMessage)}`; 
+            window.open(whatsappLink, "_blank");
         });
     </script>
+
+<br>
+<footer class="footer">
+    <p>&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
+</footer>
 </body>
 </html>
