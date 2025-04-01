@@ -18,6 +18,16 @@
         <p>Total: R$ <span id="cart-total">0.00</span></p>
     </section>
 
+     <section id="checkout">
+        <button id="whatsapp-button" class="whatsapp-btn">
+            Enviar Pedido para o WhatsApp 🛒
+        </button>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
+    </footer>
+    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const cart = [];
@@ -88,11 +98,7 @@
         });
     </script>
 
-    <section id="checkout">
-        <button id="whatsapp-button" class="whatsapp-btn">
-            Enviar Pedido para o WhatsApp 🛒
-        </button>
-    </section>
+   
 
     <script>
         document.getElementById("whatsapp-button").addEventListener("click", function() {
@@ -115,8 +121,6 @@
             window.open(whatsappLink, "_blank");
         });
     </script>
-<footer class="footer">
-    <p>&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
-</footer>
+
 </body>
 </html>
