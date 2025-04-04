@@ -103,11 +103,13 @@ body {
     box-shadow: 0 2px 4px rgba(158, 32, 32, 0.1);
 }
 
+
 .product img {
     max-width: 100%;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
+
 
 .product h3 {
     color: #ff4d6d;
@@ -151,7 +153,6 @@ body {
     height: 3rem;
     width: 10rem;
 }
-
 
 
 .footer {
