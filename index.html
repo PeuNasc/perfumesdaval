@@ -6,7 +6,11 @@
     <title>Perfumes da Val</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="imagemaba.png" type="image/icone">
-    <link rel="stylesheet" href="style.css">
+    <!--css1-->
+    <link id="css1" rel="stylesheet" href="style.css">
+    <!--css2-->
+        <link id="css2" rel="stylesheet" href="style2.css" disabled>
+
     <script>
         function mostrarAlerta() {
             alert("PRODUTO ADICIONADO AO CARRINHO COM SUCESSO!");
@@ -18,6 +22,7 @@
         <div class="header-content">
             <h1>Perfumes da Val</h1>
             <p>Elegância e sofisticação em cada fragrância</p>
+        <button id="botao_acessibilidade" onclick="alternarEstilos()">Alternar Estilo</button>
         </div>
         <nav class="navbar">
             <ul class="nav-links">
@@ -522,6 +527,6 @@
             loadCartFromLocalStorage();
         });
     </script>
-    
+    <script src="index.js"></script>
 </body>
 </html>

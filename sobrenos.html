@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfumes da Val</title>
     <link rel="icon" href="imagemaba.png" type="image/icone">
-    <link rel="stylesheet" href="stylesobrenos.css">
+    <link id="sobrenoscss1" rel="stylesheet" href="stylesobrenos.css">
+    <link id="sobrenoscss2" rel="stylesheet" href="stylesobrenos2.css" disabled>
 </head>
 <body>
     <header class="header">
         <div class="header-content">
             <h1>Perfumes da Val</h1>
             <p>Elegância e sofisticação em cada fragrância</p>
+            <button onclick="alternarEstilos()">Alternar Estilo</button>
         </div>
         <nav class="navbar">
             <ul class="nav-links">
@@ -132,6 +134,8 @@
             loadCartFromLocalStorage();
         });
     </script>
+    <script src="sobrenos.js"> </script>
     
 </body>
+
 </html>

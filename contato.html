@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfumes da Val</title>
     <link rel="icon" href="imagemaba.png" type="image/icone">
-    <link rel="stylesheet" href="stylecontato.css">
+    <link id="contato.css1" rel="stylesheet" href="stylecontato.css">
+    <link id="contato.css2" rel="stylesheet" href="stylecontato2.css" disabled>
+    
 </head>
 <body>
     <header class="header">
         <div class="header-content">
             <h1>Perfumes da Val</h1>
             <p>Elegância e sofisticação em cada fragrância</p>
+            <button onclick="alternarEstilos()">Alternar Estilo</button>
         </div>
         <nav class="navbar">
             <ul class="nav-links">
@@ -20,6 +23,7 @@
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
+        
     </header>
     <section id="cart" class="cart">
         <p id="cart-title">Sua Sacola</p>
@@ -116,6 +120,6 @@
             loadCartFromLocalStorage();
         });
     </script>
-    
+    <script src="contato.js"></script>
 </body>
 </html>
