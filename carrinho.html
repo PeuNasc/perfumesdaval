@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho - Perfumes da Val</title>
-    <link rel="stylesheet" href="stylecarrinho.css">
+    <link id="carrinho.css1" rel="stylesheet" href="stylecarrinho.css">
+    <link id="carrinho.css2" rel="stylesheet" href="stylecarrinho2.css" disabled>
 </head>
 <body>
 
     <header class="header">
         <h1>Perfumes da Val - Carrinho</h1>
+        <button id="botao_acessibilidade" onclick="alternarEstilos()">Alternar Estilo</button>
     </header>
 
     <section id="cart" class="cart">
@@ -121,6 +123,6 @@
             window.open(whatsappLink, "_blank");
         });
     </script>
-
+    <script src="carrinho.js"></script>
 </body>
 </html>

@@ -46,9 +46,8 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Links de navegação */
 .nav-links a {
-    color: #c1c1c1; /* Cor clara neutra para links */
+    color: #c1c1c1;
     font-size: 1rem;
     text-decoration: none;
     font-weight: bold;

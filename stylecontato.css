@@ -203,3 +203,42 @@ body {
 .footer:hover {
     background-color: #ff3366;
 }
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    #cart-icon img {
+        height: 40px;
+    }
+
+    .add-to-cart {
+        font-size: 1rem;
+        width: auto;
+        padding: 0.8rem 1.5rem;
+        margin-top: 1rem;
+        border-radius: 30px;
+        text-align: center;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-to-cart {
+        font-size: 1.1rem;
+        padding: 0.8;
+    }
+}

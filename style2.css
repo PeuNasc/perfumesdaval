@@ -1,4 +1,3 @@
-/* Corpo da página */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -7,7 +6,6 @@ body {
     color: #e0e0e0;
 }
 
-/* Cabeçalho */
 .header {
     background-color: #2a2a2a;
     color: #ffffff;
@@ -17,7 +15,6 @@ body {
     border-radius: 10px;
 }
 
-/* Título do cabeçalho */
 .header-content h1 {
     font-size: 3.5rem;
     margin: 0;
@@ -26,7 +23,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* Parágrafo no cabeçalho */
 .header-content p {
     font-size: 1.4rem;
     margin-top: 0.5rem;
@@ -36,18 +32,16 @@ body {
     line-height: 1.6;
 }
 
-/* Rodapé */
 #rodape {
-    color: #e0e0e0; /* Texto claro */
+    color: #e0e0e0; 
     font-family: 'Playfair Display';
 }
 
-/* Direitos autorais */
+
 #direitosautorais {
     color: #ffffff;
 }
 
-/* Navegação */
 .navbar {
     background-color: #333333;
     padding: 1rem 0;
@@ -55,9 +49,9 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Links de navegação */
+
 .nav-links a {
-    color: #c1c1c1; /* Cor clara neutra para links */
+    color: #c1c1c1;
     font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
@@ -108,46 +102,44 @@ body {
     gap: 1.5rem;
 }
 
-/* Produto */
+
 .product {
     text-align: center;
-    background: #2c2c2c; /* Fundo escuro */
+    background: #2c2c2c;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(158, 32, 32, 0.1);
 }
 
-/* Imagem do produto */
 .product img {
     max-width: 100%;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
 
-/* Título do produto */
+
 .product h3 {
-    color: #ffffff; /* Título em branco */
+    color: #ffffff;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     font-family: DMSans, Helvetica, Arial, sans-serif;
 }
 
-/* Descrição do produto */
 .product p {
     margin: 0.5rem 0;
     font-size: 0.9rem;
 }
 
-/* Preço do perfume */
+
 #preçoperfume {
     font-size: x-large;
     font-family: arial, sans-serif;
-    color: #ffb74d; /* Laranja suave para o preço */
+    color: #ffb74d; 
 }
 
-/* Botão de adicionar ao carrinho */
+
 .add-to-cart {
-    background-color: #4f6d7a; /* Azul suave */
+    background-color: #4f6d7a;
     color: #ffe6ec;
     border: #c1c1c1;
     height: 2rem;
@@ -170,27 +162,26 @@ body {
     width: 10rem;
 }
 
-/* Rodapé */
 .footer {
-    background-color: #333333; /* Fundo escuro neutro */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #333333;
+    color: #e0e0e0;
     text-align: center;
     padding: 2rem 1rem;
     font-size: 1rem;
-    border-top: 3px solid #2a4f59; /* Azul suave para o topo do rodapé */
+    border-top: 3px solid #2a4f59;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Links do rodapé */
+
 .footer a {
-    color: #ffb74d; /* Laranja suave para links */
+    color: #ffb74d; 
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover de links do rodapé */
+
 .footer a:hover {
     text-decoration: underline;
     color: #ffffff;
@@ -198,7 +189,7 @@ body {
 }
 
 .footer:hover {
-    background-color: #2a4f59; /* Azul mais forte no hover */
+    background-color: #2a4f59;
 }
 
 
@@ -223,7 +214,6 @@ body {
     float: center;
 }
 
-/* Carrinho */
 .cart {
     background: #333333;
     padding: 1rem;
