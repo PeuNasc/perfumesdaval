@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes da Val</title>
+    <link rel="icon" href="imagemaba.png" type="image/icone">
+    <link id="css1" rel="stylesheet" href="style.css">
+    <link id="css2" rel="stylesheet" href="style2.css" disabled>
+
+    <script>
+        function mostrarAlerta() {
+            alert("PRODUTO ADICIONADO AO CARRINHO COM SUCESSO!");
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Perfumes da Val</h1>
+            <p>Elegância e sofisticação em cada fragrância</p>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Produtos</a></li>
+                <li><a href="sobrenos.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <button id="botao_acessibilidade1" onclick="alternarEstilos()">
+                <img id="imgacessibilidade" src="iconeacessibilididade.png" alt="Ativar Acessibilidade">
+            </button>
+        </nav>
+    </header>
+    <section id="cart" class="cart">
+        <p id="cart-title">Sua Sacola</p>
+        <div class="cart-header">
+            <a href="carrinho.html" id="cart-icon">
+               <button id="sacola">Pague aqui</button> 
+            </a>
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+                <ul id="cart-items"></ul>
+                <p>Total: R$ <span id="cart-total">0.00</span></p>
+            </div>
+        </div>
+    </section>
+    
+    <main class="container">
+        <section id="products" class="products">
+            <h2>Nossos Produtos</h2>
+            <div class="product-grid">
+
+                <div class="product">
+                    <img src="Imagens/malbectradicional.jpg" alt="Malbec Tradicional" class="product-image">
+                    <h3>Malbec Tradicional</h3>
+                    <p>Descubra a intensidade e a sofisticação do <strong>Malbec Tradicional!</strong> Uma fragrância marcante com notas amadeiradas e envolventes, inspirada no processo exclusivo de maturação em barris de carvalho. Perfeito para homens autênticos e confiantes. 🍷✨</p>
+                    <p id="preçoperfume">R$ 190,00</p>
+                    <button class="add-to-cart" data-name="Malbec Tradicional" data-price="190.00" onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/quasevision.jpg" alt="Quasar Vision 100ml" class="product-image">
+                    <h3>Quasar Vision 100ml</h3>
+                    <p><strong>Quasar Vision Desodorante Colônia 100ml</strong> é uma fragrância masculina fougère fresca do Boticário, com notas de mandarina, lavanda e cedro. Inspirada em homens modernos e dinâmicos, oferece frescor e energia para o dia a dia. Ideal para quem busca um aroma clássico com um toque contemporâneo.</p>
+                    <p id="preçoperfume">R$ 139,00</p>
+                    <button class="add-to-cart" data-name="Quasar Vision 100ml" data-price="139.00" onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/iliaser50ml.jpg" alt="Ilia" class="product-image">
+                    <h3>Ilía Ser 50ml</h3>
+                    <p>Descubra o encanto do <strong>Iliá Ser Desodorante Colônia 50ml!</strong> Uma fragrância que celebra a força e a delicadeza feminina, com notas florais sofisticadas e um toque amadeirado envolvente. Perfeito para quem quer deixar sua marca com elegância e autenticidade. 🌸✨</p>
+                    <p id="preçoperfume">R$ 129,90</p>
+                    <button class="add-to-cart" data-name="Ilía Ser 50ml" data-price="129.90" onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/glamoursecretsblack.jpg" alt="Glamour Secrets Black 75ml" class="product-image">
+                    <h3>Glamour Secrets Black Desodorante Colônia 75ml</h3>
+                    <p>Encante-se com o <strong>Glamour Secrets Black Desodorante Colônia 75ml!</strong> Uma fragrância sofisticada e marcante, que combina o frescor das frutas, a elegância das flores e a doçura irresistível da baunilha. Perfeita para momentos especiais, este perfume vai te acompanhar em todos os seus melhores momentos. 💕✨</p>
+                    <p id="preçoperfume">R$ 130,00</p>
+                    <button class="add-to-cart" data-name="Glamour Secrets Black 75ml" data-price="130.00"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/florattaredcolonia.jpg" alt="Colonia Florata Red" class="product-image">
+                    <h3>Floratta Red Desodorante Colônia 75ml</h3>
+                    <p>"Com notas florais envolventes e um toque frutado irresistível, o <strong>Floratta Red Desodorante Colônia 75ml</strong> é a escolha perfeita para mulheres que desejam marcar presença com elegância e delicadeza. Inspirado na doçura da maçã de Vermont, esta fragrância exala romantismo e sofisticação, ideal para acompanhar você em momentos inesquecíveis. 🌹✨"</p>
+                    <p id="preçoperfume">R$ 149,90</p>
+                    <button class="add-to-cart" data-name="Floratta Red Desodorante Colônia 75ml" data-price="149.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/DeoParfumFeminino100 ml.jpg" alt="Deo Parfum Feminino 100 ml" class="product-image">
+                    <h3>Deo Parfum Feminino 100 ml</h3>
+                    <p>Uma fragrância envolvente que combina notas frescas e florais para um toque de leveza, com fixação prolongada para te acompanhar o dia todo. Perfeito para quem deseja marcar presença com charme e elegância. Ideal para presentear ou se presentear! 💐✨</p>
+                    <p id="preçoperfume">De: <s>R$ 278,90</s> <br>
+                    Por: R$ 177,90</s></p>
+                    <button class="add-to-cart" data-name="Deo Parfum Feminino 100 ml" data-price="177.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/DesodoranteColôniaNaturaHomemMasculino100 ml.jpg" alt="Desodorante Colônia Natura Homem Masculino 100 ml" class="product-image">
+                    <h3>Desodorante Colônia Natura Homem Masculino 100 ml</h3>
+                    <p>Uma fragrância sofisticada e equilibrada, perfeita para o homem moderno que valoriza autenticidade e estilo. Com notas frescas e amadeiradas, Natura Homem é ideal para o dia a dia, proporcionando frescor e personalidade na medida certa. Sinta-se confiante e marcante em qualquer ocasião! 🔥💼</p>
+                    <p id="preçoperfume">De: <s> R$ 198,90</s>
+                    <br>
+                    Por: R$ 108,90    </p>
+                    <button class="add-to-cart" data-name="Desodorante Colônia Natura Homem Masculino 100 ml" data-price="108.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/kaiakextremomasculino100ml.jpg" alt="Kaiak Extremo Masculino 100 ml" class="product-image">
+                    <h3>Kaiak Extremo Masculino 100 ml</h3>
+                    <p>Para quem vive sem limites, Kaiak Extremo traz uma fragrância vibrante e revigorante, inspirada na força das águas geladas. Com notas frescas e amadeiradas, essa essência combina energia e intensidade para homens que enfrentam qualquer desafio com determinação. Sinta o frescor extremo e mergulhe nessa experiência única! 💙🔥</p>
+                    <p id="preçoperfume">De: <s>R$ 185,90</s> 
+                    <br>
+                    Por: R$ 119,90</p>
+                    <button class="add-to-cart" data-name="Kaiak Extremo Masculino 100 ml" data-price="119.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/EssencialSentirMasculino100 ml.jpg" alt="Essencial Sentir Masculino 100 ml" class="product-image">
+                    <h3>Essencial Sentir Masculino 100 ml</h3>
+                    <p>Uma fragrância sofisticada e marcante, com notas amadeiradas e toques frescos que refletem força e autenticidade. Perfeito para homens que deixam sua essência por onde passam. 💼🔥</p>
+                    <p id="preçoperfume">De: <s>R$ 278,90</s> <br>
+                    Por: R$ 179,90</s></p>
+                    <button class="add-to-cart" data-name="Essencial Sentir Masculino 100 ml" data-price="179.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/DesodorantePerfumeEssencialMasculino100 ml.jpg" alt="Essencial Masculino 100 ml" class="product-image">
+                    <h3>Essencial Masculino 100 ml</h3>
+                    <p>Uma fragrância intensa e marcante, perfeita para homens que exalam confiança e elegância. Com notas amadeiradas sofisticadas e um toque envolvente de frescor, Essencial Masculino é ideal para qualquer ocasião, do trabalho aos momentos especiais. Deixe sua presença registrada com este perfume inesquecível! 💼🔥</p>
+                    <p id="preçoperfume">R$ 278,90</p>
+                    <button class="add-to-cart" data-name="Desodorante Perfume Essencial Masculino 100 ml" data-price="278.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/EssencialExclusivoMasculino100 ml.jpg" alt="Essencial Exclusivo Masculino 100 ml" class="product-image">
+                    <h3>Essencial Exclusivo Masculino 100 ml</h3>
+                    <p>Uma fragrância marcante e envolvente para homens que valorizam elegância e autenticidade. Essencial Exclusivo Masculino combina notas amadeiradas nobres com toques especiados e intensos, resultando em um perfume sofisticado e inesquecível. Ideal para quem deseja deixar sua marca por onde passa! 🔥💼</p>
+                    <p id="preçoperfume">R$ 278,90</p>
+                    <button class="add-to-cart" data-name="Essencial Exclusivo Masculino 100 ml" data-price="278.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/essencialatomasculino100ml.jpg" alt="Essencial Ato Masculino 100 ml" class="product-image">
+                    <h3>Essencial Ato Masculino 100 ml</h3>
+                    <p>Uma fragrância poderosa e sofisticada para homens que expressam sua autenticidade com confiança. Essencial Ato Masculino traz uma combinação envolvente de notas amadeiradas e especiadas, criando um aroma marcante e inesquecível. Perfeito para ocasiões especiais e para quem deseja deixar sua presença registrada. 🔥💼</p>
+                    <p id="preçoperfume">R$ 278,90</p>
+                    <button class="add-to-cart" data-name="Essencial Ato Masculino 100 ml" data-price="278.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="Imagens/EssencialSupremeMasculino100 ml.jpg" alt="Essencial Supreme Masculino 100 ml" class="product-image">
+                    <h3>Essencial Supreme Masculino 100 ml</h3>
+                    <p>Uma fragrância intensa e sofisticada, criada para o homem que exala elegância e confiança. Essencial Supreme combina notas amadeiradas com toques especiados, resultando em um aroma marcante e irresistível. Perfeito para quem quer se destacar com classe e personalidade. 💼🕴️</p>
+                    <p id="preçoperfume">R$ 278,90</p>
+                    <button class="add-to-cart" data-name="Essencial Supreme Masculino 100 ml" data-price="278.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/MeuPrimeiroHumorFeminino75 ml.jpg" alt="Meu Primeiro Humor Feminino 75 ml" class="product-image">
+                    <h3>Meu Primeiro Humor Feminino 75 ml</h3>
+                    <p>Uma fragrância jovem, divertida e cheia de personalidade! Meu Primeiro Humor combina notas frutais e florais em uma composição vibrante e envolvente, perfeita para quem ama espalhar alegria por onde passa. Sinta-se leve, autêntica e cheia de energia todos os dias! ✨🍓🌷</p>
+                    <p id="preçoperfume">R$ 153,90</p>
+                    <button class="add-to-cart" data-name="Meu Primeiro Humor Feminino 75 ml" data-price="153.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/comboeudora.png" alt="Combo Siàge Nutri Rosé: Shampoo 250ml + Condicionador 200ml + Leave-in 100ml" class="product-image">
+                    <h3>Combo Siàge Nutri Rosé: Shampoo 250ml + Condicionador 200ml + Leave-in 100ml</h3>
+                    <p><strong>O Combo Siàge Nutri Rosé</strong> traz 3 itens que você precisa para deixar seus cabelos lindos, saudáveis e com balanço natural. A linha possui o Efeito Anti-Tesoura, evitando que você precise recorrer aos cortes para proporcionar saúde e vida aos seus fios. Além disso, ele deixa uma fragrância sofisticada nos fios que vai ganhar o seu coração.</p>
+                    <p id="preçoperfume">De: <s>R$ 167,96</s> <br>Por: R$ 134,90</p>
+                    <button class="add-to-cart" data-name="Combo Siàge Nutri Rosé: Shampoo 250ml + Condicionador 200ml + Leave-in 100ml" data-price="134.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="Imagens/arbodesodorantecolonia100ml.jpg" alt="Arbo Desodorante Colônia 100ml" class="product-image">
+                    <h3>Arbo Desodorante Colônia 100ml</h3>
+                    <p>Sinta a liberdade da natureza com <strong>Arbo Desodorante Colônia 100ml</strong>. Uma fragrância refrescante e revigorante, inspirada no ar puro das florestas. Ideal para homens que buscam leveza e conexão com o natural no dia a dia. 🌿✨</p>
+                    <p id="preçoperfume">De: <s>R$ 159,90</s><br>Por: R$ 139,90</p>
+                    <button class="add-to-cart" data-name="Arbo Desodorante Colônia 100ml" data-price="139.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="Imagens/EgeoBlueDesodoranteColônia90ml.jpg" alt="Egeo Blue Desodorante Colônia 90ml" class="product-image">
+                    <h3>Egeo Blue Desodorante Colônia 90ml</h3>
+                    <p>O <strong>Egeo Blue Desodorante Colônia 90ml</strong> é a escolha perfeita para quem gosta de frescor e energia. Com notas vibrantes e marcantes, essa fragrância traz um toque moderno e irresistível para o seu dia a dia. Sinta a leveza e a ousadia de Egeo Blue! 💙✨</p>
+                    <p id="preçoperfume">De: <s>R$ 155,00</s><br>Por: R$ 135,00</p>
+                    <button class="add-to-cart" data-name="Egeo Blue Desodorante Colônia 90ml" data-price="135.00"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="Imagens/EgeoRedDesodoranteColônia90ml.jpg" alt="Egeo Red Desodorante Colônia 90ml" class="product-image">
+                    <h3>Egeo Red Desodorante Colônia 90ml</h3>
+                    <p>O <strong>Egeo Red Desodorante Colônia 90ml</strong> é uma fragrância irresistível, intensa e cheia de atitude. Com notas adocicadas e envolventes, ele combina frutas vermelhas e toques quentes de baunilha e caramelo, criando um aroma sedutor e viciante. Perfeito para quem gosta de marcar presença e deixar uma lembrança inesquecível.❤️✨</p>
+                    <p id="preçoperfume">De: <s>R$ 155,00</s><br>Por: R$ 135,00</p>
+                    <button class="add-to-cart" data-name="Egeo Red Desodorante Colônia 90ml" data-price="135.00"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/combosiageresgateimeditado.png" alt="Combo Siàge Resgate Imediato: Shampoo 250ml + Condicionador 200ml + Máscara Capilar 250g" class="product-image">
+                    <h3>Combo Siàge Resgate Imediato: Shampoo 250ml + Condicionador 200ml + Máscara Capilar 250g</h3>
+                    <p>Ideal para a sua rotina de hair care, <strong>o Combo Siàge Resgate Imediato</strong> traz <strong>shampoo e condicionador</strong> para a limpeza diária e <strong>máscara capilar</strong> para o tratamento semanal. Com a exclusiva Biotecnologia Affinité 4D e fórmulas enriquecidas com FIBER Restore®, Siàge Resgate Imediato traz a etapa de reconstrução do cronograma capilar, resgatando imediatamente fios com danos persistentes:</p>
+                    <p id="preçoperfume">De: <s>R$ 167,97</s><br>Por: R$ 136,90</p>
+                    <button class="add-to-cart" data-name="Combo Siàge Resgate Imediato: Shampoo 250ml + Condicionador 200ml + Máscara Capilar 250g" data-price="136.90"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="Imagens/ShampooSiàgeResgateImediato250ml.jpg" alt="Shampoo Siàge Resgate Imediato 250ml" class="product-image">
+                    <h3>Shampoo Siàge Resgate Imediato 250ml</h3>
+                    <p>O <strong>Shampoo Siàge Resgate Imediato</strong> limpa suavemente, removendo impurezas sem agredir os fios. Livre de corantes, petrolatos e sal¹, ele hidrata e auxilia na recuperação capilar. Com a <strong>Biotecnologia Affinité 4D</strong>, proporciona reconstrução profunda para todos os tipos de cabelo, tornando o autocuidado ainda mais especial! 💖</p>
+                    <p id="preçoperfume">R$ 47,99</p>
+                    <button class="add-to-cart" data-name="Shampoo Siàge Resgate Imediato 250ml" data-price="47.99"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/CondicionadorSiàgeResgateImediato200ml.jpg" alt="Condicionador Siàge Resgate Imediato 200ml" class="product-image">
+                    <h3>Condicionador Siàge Resgate Imediato 200ml</h3>
+                    <p>O <strong>Condicionador Siàge Resgate Imediato</strong> protege os fios, reduz a porosidade e evita o ressecamento, garantindo hidratação profunda. Livre de corantes e petrolatos, auxilia na recuperação capilar com a <strong>Biotecnologia Affinité 4D</strong>. Com ação <strong>antidanos</strong>, reconstrói até os cabelos mais danificados, deixando-os saudáveis e fortes! 💖</p>
+                    <p id="preçoperfume">R$ 49,99</p>
+                    <button class="add-to-cart" data-name="Condicionador Siàge Resgate Imediato 200ml" data-price="49.99"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/MáscaraBalmPreenchedoraSiàgeResgateImediato250g.jpg" alt="Máscara Balm Preenchedora Siàge Resgate Imediato 250g" class="product-image">
+                    <h3>Máscara Balm Preenchedora Siàge Resgate Imediato 250g</h3>
+                    <p>A <strong>Máscara Balm Preenchedora Siàge Resgate Imediato</strong> promove reconstrução intensa dos fios, preenchendo áreas danificadas e restaurando a vitalidade do cabelo. Com <strong>Biotecnologia Affinité 4D</strong>, hidrata profundamente, reduz a porosidade e forma um escudo protetor contra novos danos. Perfeita para cabelos que precisam de um verdadeiro resgate! 💖✨</p>
+                    <p id="preçoperfume">R$ 69,99</p>
+                    <button class="add-to-cart" data-name="Máscara Balm Preenchedora Siàge Resgate Imediato 250g" data-price="69.99"  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="Imagens/" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="Imagens/" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="Imagens/" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="product">
+                    <img src="" alt="" class="product-image">
+                    <h3></h3>
+                    <p></p>
+                    <p id="preçoperfume"></p>
+                    <button class="add-to-cart" data-name="" data-price=""  onclick="mostrarAlerta()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section id="contact" class="contact">
+            <p id="rodape"><strong>Gostou dos nosso Produtos mas ainda tem dúvidas? Entre em contato para mais informações!</strong></p>
+            <br>
+            <p id="tipodecontato"><strong>Email: </strong></p>
+            <p><a id="zapemail" href="mailto:valdinacia@gmail.com">valdinacia@gmail.com</a></p>
+            <br>
+            <p id="tipodecontato"><strong>WhatsApp:</strong></p>
+            <a id="zapemail" href="https://wa.me/557591305599?text">(75) 99130-5599</a>
+            <br>
+            <br>
+            <p id="direitosautorais">&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
+        </section>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cart = [];
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+    
+            document.querySelectorAll(".add-to-cart").forEach(button => {
+                button.addEventListener("click", () => {
+                    const name = button.getAttribute("data-name");
+                    const price = parseFloat(button.getAttribute("data-price"));
+    
+                    const existingItem = cart.find(item => item.name === name);
+    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cart.push({ name, price, quantity: 1 });
+                    }
+    
+                    updateCart();
+                    saveCartToLocalStorage();
+                });
+            });
+    
+            function updateCart() {
+                cartItems.innerHTML = "";
+    
+                let total = 0;
+    
+                cart.forEach((item, index) => {
+                    total += item.price * item.quantity;
+                    const li = document.createElement("li");
+                    li.textContent = `${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`;
+    
+                    const removeButton = document.createElement("button");
+                    removeButton.textContent = "Remover";
+                    removeButton.addEventListener("click", () => {
+                        if (item.quantity > 1) {
+                            item.quantity -= 1;
+                        } else {
+                            cart.splice(index, 1);
+                        }
+    
+                        updateCart();
+                        saveCartToLocalStorage();
+                    });
+    
+                    li.appendChild(removeButton);
+                    cartItems.appendChild(li);
+                });
+    
+                cartTotal.textContent = total.toFixed(2);
+            }
+    
+            function saveCartToLocalStorage() {
+                localStorage.setItem("cart", JSON.stringify(cart));
+            }
+    
+            function loadCartFromLocalStorage() {
+                const storedCart = JSON.parse(localStorage.getItem("cart"));
+                if (storedCart) {
+                    storedCart.forEach(item => cart.push(item));
+                    updateCart();
+                }
+            }
+    
+            loadCartFromLocalStorage();
+        });
+    </script>
+    <script src="tema.js"></script>
+</body>
+</html>

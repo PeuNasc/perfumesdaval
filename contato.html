@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes da Val</title>
+    <link rel="icon" href="imagemaba.png" type="image/icone">
+    <link id="css1" rel="stylesheet" href="stylecontato.css">
+    <link id="css2" rel="stylesheet" href="stylecontato2.css" disabled>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Perfumes da Val</h1>
+            <p>Elegância e sofisticação em cada fragrância</p>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Produtos</a></li>
+                <li><a href="sobrenos.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <button id="botao_acessibilidade1" onclick="alternarEstilos()">
+                <img id="imgacessibilidade" src="iconeacessibilididade.png" alt="Ativar Acessibilidade">
+            </button>
+        </nav>
+    </header>
+    <section id="cart" class="cart">
+        <p id="cart-title">Sua Sacola</p>
+        <div class="cart-header">
+            <a href="carrinho.html" id="cart-icon">
+               <button id="sacola">Pague aqui</button> 
+            </a>
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+                <ul id="cart-items"></ul>
+                <p>Total: R$ <span id="cart-total">0.00</span></p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Entre em Contato</h2>
+        <p><strong>Gostou dos nosso Produtos mas ainda tem dúvidas? Entre em contato para mais informações!</strong></p>
+        <br>
+        <p id="tipodecontato"><strong>Email: </strong></p>
+            <p><a id="zapemail" href="mailto:valdinacia@gmail.com">valdinacia@gmail.com</a></p>
+            <br>
+        <p id="tipodecontato"><strong>WhatsApp:</strong></p>
+        <a id="zapemail" href="https://wa.me/557591305599?text">(75) 99130-5599</a>
+    </section>
+    <footer class="footer">
+            <p id="direitosautorais">&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
+        </section>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cart = [];
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+    
+            document.querySelectorAll(".add-to-cart").forEach(button => {
+                button.addEventListener("click", () => {
+                    const name = button.getAttribute("data-name");
+                    const price = parseFloat(button.getAttribute("data-price"));
+    
+                    const existingItem = cart.find(item => item.name === name);
+    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cart.push({ name, price, quantity: 1 });
+                    }
+    
+                    updateCart();
+                    saveCartToLocalStorage();
+                });
+            });
+    
+            function updateCart() {
+                cartItems.innerHTML = "";
+    
+                let total = 0;
+    
+                cart.forEach((item, index) => {
+                    total += item.price * item.quantity;
+                    const li = document.createElement("li");
+                    li.textContent = `${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`;
+    
+                    const removeButton = document.createElement("button");
+                    removeButton.textContent = "Remover";
+                    removeButton.addEventListener("click", () => {
+                        if (item.quantity > 1) {
+                            item.quantity -= 1;
+                        } else {
+                            cart.splice(index, 1);
+                        }
+    
+                        updateCart();
+                        saveCartToLocalStorage();
+                    });
+    
+                    li.appendChild(removeButton);
+                    cartItems.appendChild(li);
+                });
+    
+                cartTotal.textContent = total.toFixed(2);
+            }
+    
+            function saveCartToLocalStorage() {
+                localStorage.setItem("cart", JSON.stringify(cart));
+            }
+    
+            function loadCartFromLocalStorage() {
+                const storedCart = JSON.parse(localStorage.getItem("cart"));
+                if (storedCart) {
+                    storedCart.forEach(item => cart.push(item));
+                    updateCart();
+                }
+            }
+    
+            loadCartFromLocalStorage();
+        });
+    </script>
+    <script src="tema.js"></script>
+</body>
+</html>

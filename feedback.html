@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagemaba.png" type="image/icone">
+    <link id="css1" rel="stylesheet" href="feedback1.css">
+    <link id="css2"  rel="stylesheet" href="feedback2.css" disabled>
+   
+    <title>Perfumes da Val</title>
+</head>
+<body>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Perfumes da Val</h1>
+            <p>Elegância e sofisticação em cada fragrância</p>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Produtos</a></li>
+                <li><a href="sobrenos.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <button id="botao_acessibilidade1" onclick="alternarEstilos()">
+                <img id="imgacessibilidade" src="iconeacessibilididade.png" alt="Ativar Acessibilidade">
+            </button>
+        </nav>
+    </header>
+    <main>
+        <h2>DEIXE AQUI SEU FEEDBACK</h2>
+        <form>
+          <label for="nomecompleto">Nome Completo:</label>
+          <input type="text" id="nomecompleto" name="nomecompleto" placeholder="Digite seu nome completo" required>
+          <br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+          <br><br>
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(DDD) 00000-0000" required>
+          <br><br>
+          <label>Gênero:</label>
+          <div>
+            <input type="radio" id="genero-masculino" name="genero" value="masculino" required>
+            <label for="genero-masculino">Masculino</label>
+          </div>
+          <div>
+            <input type="radio" id="genero-feminino" name="genero" value="feminino">
+            <label for="genero-feminino">Feminino</label>
+          </div>
+          <div>
+            <input type="radio" id="genero-prefiro-nao-informar" name="genero" value="prefiro-nao-informar">
+            <label for="genero-prefiro-nao-informar">Prefiro não informar</label>
+          </div>
+          <br><br>
+          <label for="comentarios">Deixe aqui seu comentário e sugestões:</label><br>
+          <textarea id="comentarios" name="comentarios" placeholder="Escreva seu feedback..." rows="5" required></textarea>
+          <br><br>
+          <button type="submit">Enviar Formulário</button>
+        </form>
+      </main>
+
+  
+    <script src="tema.js"></script>
+</body>
+</html>
