@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Tangerine:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -144,6 +146,31 @@ body {
 
 .whatsapp-btn:hover {
     background-color: #128c7e;
+}
+
+#deixe-feedback {
+    background-color: #726f71;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#deixe-feedback:hover {
+    background-color: #5e5b5d;
+}
+
+#link-html{
+    color: white;
+    text-decoration: none;
 }
 
 @media (max-width: 1024px) {
