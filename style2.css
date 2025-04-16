@@ -162,7 +162,7 @@ body {
 }
 
 .add-to-cart:hover {
-    background-color: #2a4f59; /* Azul mais forte no hover */
+    background-color: #2a4f59;
     color: #ffe6ec;
     border: #c1c1c1;
     height: 3rem;
