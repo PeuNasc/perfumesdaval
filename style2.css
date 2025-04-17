@@ -31,15 +31,6 @@ body {
     letter-spacing: 1px;
 }
 
-.header-content p {
-    font-size: 1.2rem;
-    margin: 0;
-    font-family: 'Lora', serif;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    line-height: 1.4;
-    color: #c1c1c1;
-}
 
 .navbar {
     display: flex;

@@ -27,44 +27,54 @@
         </button>
     </nav>
 </header>
-    <main>
-        <h2>DEIXE AQUI SEU FEEDBACK</h2>
-        <form>
-          <label for="nomecompleto">Nome Completo:</label>
-          <input type="text" id="nomecompleto" name="nomecompleto" placeholder="Digite seu nome completo" required>
-          <br><br>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-          <br><br>
-          <label for="telefone">Telefone:</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="(DDD) 00000-0000" required>
-          <br><br>
-          <label>Gênero:</label>
-          <br>
-          <div class="radio-group">
-            <div class="radio-option">
-              <label for="masculino">Masculino</label>
-              <input type="radio">
-                
-            </div>
-            <div class="radio-option">
-                <input type="radio" id="feminino" name="genero" value="feminino">
-                <label for="feminino">Feminino</label>
-            </div>
-            <div class="radio-option">
-                <input type="radio" id="outro" name="genero" value="outro">
-                <label for="outro">Outro</label>
-            </div>
-        </div>
-          <br><br>
-          <label for="comentarios">Deixe aqui seu comentário e sugestões:</label><br>
-          <textarea id="comentarios" name="comentarios" placeholder="Escreva seu feedback..." rows="5" required></textarea>
-          <br><br>
-          <button type="submit"></button>
-        </form>
-      </main>
+<main>
+  <h2>DEIXE AQUI SEU FEEDBACK</h2>
+  <form action="https://formsubmit.co/pedronasc.oliveira@hotmail.com" method="POST">
+    <label for="nomecompleto">Nome Completo:</label>
+    <input type="text" id="nomecompleto" name="nomecompleto" placeholder="Digite seu nome completo" required>
 
-  
-    <script src="tema.js"></script>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="(DDD) 00000-0000" required>
+
+    <label>Gênero:</label>
+      <div class="radio-group">
+        <div class="radio-option">
+          <label for="masculino">Masculino</label>
+          <input type="radio" id="masculino" name="genero" value="masculino" required>
+        </div>
+        <div class="radio-option">
+          <label for="feminino">Feminino</label>
+          <input type="radio" id="feminino" name="genero" value="feminino">
+        </div>
+        <div class="radio-option">
+          <label for="outro">Outro</label>
+          <input type="radio" id="outro" name="genero" value="outro">
+        </div>
+      </div>
+
+    <label for="comentarios">Deixe aqui seu comentário e sugestões:</label>
+    <textarea id="comentarios" name="comentarios" placeholder="Escreva seu feedback..." rows="5" required></textarea>
+
+    <button type="submit">Enviar Feedback</button>
+  </form>
+</main>
+<footer class="footer">
+        <section id="contact" class="contact">
+            <p id="rodape"><strong>Gostou dos nosso Produtos mas ainda tem dúvidas? Entre em contato para mais informações!</strong></p>
+            <br>
+            <p id="tipodecontato"><strong>Email: </strong></p>
+            <p><a id="zapemail" href="mailto:valdinacia@gmail.com">valdinacia@gmail.com</a></p>
+            <br>
+            <p id="tipodecontato"><strong>WhatsApp:</strong></p>
+            <a id="zapemail" href="https://wa.me/557591305599?text">(75) 99130-5599</a>
+            <br>
+            <br>
+            <p id="direitosautorais">&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
+        </section>
+    </footer>
+ <script src="tema.js"></script>
 </body>
 </html>

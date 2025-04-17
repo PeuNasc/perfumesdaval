@@ -35,14 +35,7 @@ body {
     letter-spacing: 1px;
 }
 
-.header-content p {
-    font-size: 1rem;
-    margin: 0;
-    font-family: 'Lora', serif;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    line-height: 1.4;
-}
+
 
 .navbar {
     display: flex;
@@ -240,9 +233,7 @@ body {
         font-size: 2rem;
     }
 
-    .header-content p {
-        font-size: 1rem;
-    }
+    
 
     .footer p {
         font-size: 0.8rem;
