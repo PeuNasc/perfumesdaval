@@ -188,7 +188,7 @@ body {
     background-color: #333333;
     color: #e0e0e0;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1rem 0rem; 
     font-size: 1rem;
     border-top: 3px solid #2a4f59;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -212,43 +212,120 @@ body {
     background-color: #2a4f59;
 }
 
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
 
-@media (max-width: 768px) {
     .header-content h1 {
         font-size: 2rem;
     }
 
+    .navbar {
+        justify-content: center;
+        gap: 1rem;
+    }
+
     .cart {
-        max-width: 100%;
-        margin: 1rem 0;
-    }
-
-    #cart-icon img {
-        height: 40px;
-    }
-
-    #cart-title {
-        font-size: 1.2rem;
+        max-width: 90%;
     }
 
     .about {
         padding: 1.5rem;
     }
+}
 
-    .about h2 {
-        font-size: 2rem;
+@media (max-width: 768px) {
+    .header {
+        padding: 0.8rem;
     }
 
-    .footer {
-        padding: 1.5rem;
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .cart ul {
+        text-align: center;
+    }
+
+    .cart li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    #cart-title {
+        font-size: 1.3rem;
+    }
+
+    #valortotal {
+        font-size: 1.2rem;
+    }
+
+    #sacola {
+        width: 80px;
+        height: 40px;
     }
 
     .footer p {
         font-size: 0.9rem;
     }
-
-    #sacola {
-        height: 40px;
-    }
 }
 
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar {
+        gap: 0.3rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .cart {
+        padding: 0.8rem;
+    }
+
+    .cart li {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #valortotal {
+        font-size: 1rem;
+    }
+
+    #sacola {
+        width: 70px;
+        height: 35px;
+    }
+
+    #sacola:active {
+        height: 45px;
+    }
+
+    .about {
+        padding: 1rem;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+}

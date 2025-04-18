@@ -102,7 +102,7 @@ body {
     text-align: center;
     background: #ffffff;
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -203,10 +203,36 @@ body {
     color: #ffd7e3;
 }
 
+#deixe-feedback {
+    background-color: #726f71;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#deixe-feedback:hover {
+    background-color: #5e5b5d;
+}
+
+#link-html{
+    color: white;
+    text-decoration: none;
+}
+
 .footer {
     background-color: #ff4d6d; 
     text-align: center;
-    padding: 2rem 1rem; 
+    padding: 1rem 0rem; 
     font-size: 1rem; 
     border-top: 3px solid #ffd7e3; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
@@ -228,39 +254,154 @@ body {
     background-color: #ff3366;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
     .header-content h1 {
         font-size: 2rem;
     }
 
-    
-
-    .footer p {
-        font-size: 0.8rem;
+    .navbar {
+        justify-content: center;
+        gap: 0.5rem;
     }
 
-    #cart-icon img {
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .cart {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    #valortotal {
+        font-size: 1.2rem;
+    }
+
+    #sacola {
+        width: 80px;
         height: 40px;
     }
 
-    .add-to-cart {
+    #sacola:active {
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0.5rem;
+    }
+
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+
+    .contact {
+        padding: 1rem;
+    }
+
+    .cart {
+        padding: 1rem;
+    }
+
+    .cart li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    #cart-title {
+        font-size: 1.2rem;
+    }
+
+    #valortotal {
         font-size: 1rem;
-        width: auto;
-        padding: 0.8rem 1.5rem;
-        margin-top: 1rem;
-        border-radius: 30px;
-        text-align: center;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #sacola {
+        width: 70px;
+        height: 35px;
+    }
+
+    #deixe-feedback {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-    .add-to-cart {
-        font-size: 1.1rem;
-        padding: 0.8;
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .cart {
+        margin: 0.5rem auto;
+        padding: 0.5rem;
+    }
+
+    #cart-title {
+        font-size: 1rem;
+    }
+
+    .cart li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    #valortotal {
+        font-size: 0.9rem;
+    }
+
+    #sacola {
+        width: 60px;
+        height: 30px;
+    }
+
+    #sacola:active {
+        height: 40px;
+    }
+
+    #deixe-feedback {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 0.5rem;
     }
 }
+

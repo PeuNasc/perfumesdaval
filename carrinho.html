@@ -5,36 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho - Perfumes da Val</title>
     <link rel="icon" href="carrinho-de-compras.png" type="image/icone">
-    <link id="carrinho.css1" rel="stylesheet" href="stylecarrinho.css">
-    <link id="carrinho.css2" rel="stylesheet" href="stylecarrinho2.css" disabled>
+    <link id="css1" rel="stylesheet" href="stylecarrinho.css">
+    <link id="css2" rel="stylesheet" href="stylecarrinho2.css" disabled>
 </head>
 <body>
-
     <header class="header">
         <h1>Perfumes da Val - Carrinho</h1>
         <button id="botao_acessibilidade1" onclick="alternarEstilos()">
             <img id="imgacessibilidade" src="iconeacessibilididade.png" alt="Ativar Acessibilidade"><br><p id="acessibilidade">acessibilidade</p>
         </button>
     </header>
-
     <section id="cart" class="cart">
         <h2>Itens no Carrinho</h2>
         <ul id="cart-items"></ul>
         <p>Total: R$ <span id="cart-total">0.00</span></p>
     </section>
-
      <section id="checkout">
         <button id="whatsapp-button" class="whatsapp-btn">
             Enviar Pedido para o WhatsApp 🛒
         </button>
     </section>
-
     <section>
         <button id="deixe-feedback">
-            <a href="feedback.html" id="link-html">Deixe aqui seu Feeback!</a>
+            <a href="feedback.html" id="link-html" target="_blank">Deixe aqui seu Feeback!</a>
         </button>
     </section>
-
     <footer class="footer">
         <p>&copy; 2025 Perfumes da Val. Todos os direitos reservados.</p>
     </footer>
@@ -132,6 +127,6 @@
             window.open(whatsappLink, "_blank");
         });
     </script>
-    <script src="carrinho.js"></script>
+    <script src="tema.js"></script>
 </body>
 </html>
