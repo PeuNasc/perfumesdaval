@@ -150,6 +150,33 @@ form input[type="radio"] {
     margin-right: 0.5rem;
 }
 
+.footer a {
+    color: #ffb74d; 
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.footer:hover {
+    background-color: #2a4f59;
+}
+#rodape {
+    color: #e0e0e0; 
+    font-family: 'Playfair Display';
+}
+
+
+#direitosautorais {
+    color: #ffffff;
+}
 
 @media (max-width: 768px) {
     .header-content h1 {
