@@ -121,14 +121,12 @@ input, textarea, button {
 
 .radio-group {
     display: flex;
-    flex-direction: column;
     gap: 10px;
-    margin-bottom: 15px;
+    
 }
 
 .radio-option {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
