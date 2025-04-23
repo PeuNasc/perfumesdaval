@@ -125,6 +125,7 @@ input, textarea, button {
 .radio-option {
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
 .radio-option label {
