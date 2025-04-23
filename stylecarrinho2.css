@@ -104,7 +104,7 @@ body {
 }
 
 .footer {
-    position: unset;
+    position: fixed;
     margin-top: 1rem;
     bottom: 0;
     left: 0;
