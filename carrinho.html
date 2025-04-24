@@ -110,24 +110,31 @@
 
     <script>
         document.getElementById("whatsapp-button").addEventListener("click", function() {
-            let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-            let cartMessage = "Olá! Tudo bem?\n\n";
-            cartMessage += "Por favor, preencha as informações abaixo para finalizar seu pedido:\n\n";
-            cartMessage += "*Seu Nome:* [Digite aqui]\n";
-            cartMessage += "*Endereço:* [Digite aqui]\n";
-            cartMessage += "*Forma de Pagamento:* [Digite aqui]\n\n";
-            cartMessage += "*Resumo do Pedido:*\n\n";
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cartItems.length === 0) {
+        alert("Seu carrinho está vazio. Adicione itens antes de enviar o pedido.");
+        return;
+    }
 
-            cartItems.forEach(item => {
-                cartMessage += `- ${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
-            });
+    let cartMessage = "Olá! Tudo bem?\n\n";
+    cartMessage += "Por favor, preencha as informações abaixo para finalizar seu pedido:\n\n";
+    cartMessage += "*Seu Nome:* [Digite aqui]\n";
+    cartMessage += "*Endereço:* [Digite aqui]\n";
+    cartMessage += "*Forma de Pagamento:* [Digite aqui]\n\n";
+    cartMessage += "*Resumo do Pedido:*\n\n";
 
-            cartMessage += `\n*Total:* R$ ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}\n\n`;
-            cartMessage += "Obrigado por escolher *PERFUMES DA VAL*! Se precisar de algo, estamos aqui para ajudar.";
+    cartItems.forEach(item => {
+        cartMessage += `- ${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
+    });
 
-            let whatsappLink = `https://wa.me/557581701297?text=${encodeURIComponent(cartMessage)}`;
-            window.open(whatsappLink, "_blank");
-        });
+    const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+    cartMessage += `\n*Total:* R$ ${total}\n\n`;
+    cartMessage += "Obrigado por escolher *PERFUMES DA VAL*! Se precisar de algo, estamos aqui para ajudar.";
+
+    const phoneNumber = "557581701297";
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(cartMessage)}`;
+    window.open(whatsappLink, "_blank");
+});
     </script>
     <script src="tema.js"></script>
 </body>
