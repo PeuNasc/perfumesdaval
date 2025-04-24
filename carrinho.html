@@ -125,7 +125,7 @@
             cartMessage += `\n*Total:* R$ ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}\n\n`;
             cartMessage += "Obrigado por escolher *PERFUMES DA VAL*! Se precisar de algo, estamos aqui para ajudar.";
 
-            let whatsappLink = `https://wa.me/557581701297text=${encodeURIComponent(cartMessage)}`; 
+            let whatsappLink = `https://wa.me/557581701297?text=${encodeURIComponent(cartMessage)}`;
             window.open(whatsappLink, "_blank");
         });
     </script>
