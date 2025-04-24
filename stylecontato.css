@@ -30,11 +30,15 @@ body {
 .header-content h1 {
     font-size: 2.5rem;
     margin: 0;
+    color: #ffffff;
     font-family: "Tangerine";
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px;
 }
 
+.nome-loja{
+    text-decoration: none;
+}
 
 
 .navbar {

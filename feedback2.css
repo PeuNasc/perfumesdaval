@@ -27,8 +27,13 @@ body {
 .header-content h1 {
     font-size: 2.5rem;
     margin: 0;
+    color: #ffffff;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px;
+}
+
+.nome-loja{
+    text-decoration: none;
 }
 
 .navbar {
@@ -48,7 +53,7 @@ body {
 
 .nav-links a {
     color: #c1c1c1;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem;

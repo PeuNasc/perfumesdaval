@@ -11,28 +11,45 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    align-items: end;
     font-size: larger;
+    padding-bottom: 100px;
 }
 
 .header {
-    background-color: #ec2388;
+    background-color: #ff4d6d;
     color: white;
-    padding: 2rem 1rem;
+    padding: 0rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 100%;
 }
 
-.header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.header-content h1 {
+    font-size: 60px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    color: #ffffff;
+    font-family: "Tangerine";
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    
+}
+
+.nome-loja{
+    text-decoration: none;
+    color: white;
 }
 
 #botao_acessibilidade1 {
+    position: absolute;
+    top: 20px; 
+    right: 20px;
     background-color: transparent;
     border: none;
+    padding: 10px;
     cursor: pointer;
+    z-index: 100;
 }
 
 #imgacessibilidade {
@@ -44,8 +61,6 @@ body {
     color: #ddd;
     text-transform: uppercase;
 }
-
-
 
 .cart {
     max-width: 800px;
@@ -90,7 +105,7 @@ body {
 }
 
 .cart button:hover {
-    background-color: #ff0000;
+    background-color: #ff4d6d;
 }
 
 .cart p {
@@ -101,12 +116,12 @@ body {
 }
 
 .footer {
-    position: unset;
+    position: fixed;
     margin-top: 1rem;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #ec2388;
+    background-color: #ff4d6d; 
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -128,7 +143,7 @@ body {
 }
 
 .whatsapp-btn {
-    background-color: #ec2388;
+    background-color: #ff4d6d; 
     color: white;
     font-size: 1.2rem;
     padding: 15px 30px;

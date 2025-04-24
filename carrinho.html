@@ -10,9 +10,11 @@
 </head>
 <body>
     <header class="header">
-        <h1>Perfumes da Val - Carrinho</h1>
+        <div class="header-content">
+            <a href="index.html" class="nome-loja"><h1>Perfumes da Val</h1></a>
+        </div>
         <button id="botao_acessibilidade1" onclick="alternarEstilos()">
-            <img id="imgacessibilidade" src="iconeacessibilididade.png" alt="Ativar Acessibilidade"><br><p id="acessibilidade">acessibilidade</p>
+        <img id="imgacessibilidade" src="iconeacessibilididade.png" alt="Ativar Acessibilidade">
         </button>
     </header>
     <section id="cart" class="cart">
@@ -123,7 +125,7 @@
             cartMessage += `\n*Total:* R$ ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}\n\n`;
             cartMessage += "Obrigado por escolher *PERFUMES DA VAL*! Se precisar de algo, estamos aqui para ajudar.";
 
-            let whatsappLink = `https://wa.me/557591305599?text=${encodeURIComponent(cartMessage)}`; 
+            let whatsappLink = `https://wa.me/55759817?1297text=${encodeURIComponent(cartMessage)}`; 
             window.open(whatsappLink, "_blank");
         });
     </script>

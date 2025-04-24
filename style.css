@@ -19,6 +19,7 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    text-decoration: none;
 }
 
 .header-content {
@@ -30,9 +31,14 @@ body {
 .header-content h1 {
     font-size: 2.5rem;
     margin: 0;
+    color: #ffffff;
     font-family: "Tangerine";
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px;
+}
+
+.nome-loja{
+    text-decoration: none;
 }
 
 .navbar {
