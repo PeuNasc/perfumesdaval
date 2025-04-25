@@ -115,33 +115,6 @@ body {
     margin-top: 20px;
 }
 
-.footer {
-    position: fixed;
-    margin-top: 1rem;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ff4d6d; 
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    
-    
-}
-
-.footer p {
-    margin: 0;
-}
-
-.footer a {
-    color: #ffd7e3;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
 .whatsapp-btn {
     background-color: #ff4d6d; 
     color: white;
@@ -188,6 +161,35 @@ body {
     color: white;
     text-decoration: none;
 }
+
+.footer {
+    position: fixed;
+    margin-top: 1rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff4d6d; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    
+    
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #ffd7e3;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
 
 @media (max-width: 1024px) {
     .header {
