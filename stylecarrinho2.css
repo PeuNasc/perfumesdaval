@@ -39,7 +39,6 @@ body {
 }
 
 #botao_acessibilidade1 {
-    position: absolute;
     top: 20px; 
     right: 20px;
     background-color: transparent;
@@ -58,8 +57,6 @@ body {
     color: #ddd;
     text-transform: uppercase;
 }
-
-
 
 .cart {
     max-width: 800px;
@@ -208,7 +205,6 @@ body {
     }
 
     .whatsapp-btn {
-        width: 40%;
         font-size: 1rem;
     }
 
@@ -244,16 +240,16 @@ body {
     .cart li {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
     }
 
     .cart li button {
-        align-self: flex-end;
+        margin-top: 5px;
     }
 
     .whatsapp-btn {
-        width: 60%;
+        width: 50%;
         font-size: 0.9rem;
+        text-align: center;
     }
 
     #deixe-feedback {
@@ -265,10 +261,12 @@ body {
 @media (max-width: 480px) {
     .header {
         padding: 0.5rem;
+        position: relative;
     }
 
     .header h1 {
         font-size: 1.5rem;
+        margin-right: 60px;
     }
 
     .cart {
@@ -289,8 +287,9 @@ body {
     }
 
     .whatsapp-btn {
-        width: 80%;
+        width: 50%;
         font-size: 0.8rem;
+        text-align: center;
     }
 
     #deixe-feedback {
@@ -300,6 +299,5 @@ body {
 
     .footer {
         font-size: 0.8rem;
-        padding: 5px 0;
     }
 }
