@@ -92,7 +92,7 @@ body {
     padding: 0 15px;
 }
 
-.products{
+.produtos{
     background: #ffffff;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -100,7 +100,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.products h2{
+.produtos h2{
     color: #ff002f;
     margin-top: 0;
     margin-bottom: 1rem;
@@ -109,13 +109,13 @@ body {
     font-size:xx-large;
 }
 
-.product-grid {
+.produtos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
 }
 
-.product {
+.produto {
     text-align: center;
     background: #ffe6ec;
     padding: 1rem;
@@ -124,14 +124,14 @@ body {
 }
 
 
-.product img {
+.produto img {
     max-width: 100%;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
 
 
-.product h3 {
+.produto h3 {
     color: #ff4d6d;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
@@ -140,7 +140,7 @@ body {
     
 }
 
-.product p {
+.produto p {
     margin: 0.5rem 0;
     font-size: 0.9rem;
 }
@@ -151,14 +151,14 @@ body {
     color: #fa033d;
 }
 
-.add-to-cart{
+.add-carrinho{
     background-color: #e62753;
     color: #ffe6ec;
     border: #fa033d;
     height: 2rem;
     width: none;
 }
-.add-to-cart:hover{
+.add-carrinho:hover{
     background-color: #ff003c;
     color: #ffe6ec;
     border: #fa033d;
@@ -166,7 +166,7 @@ body {
     width: 10rem;
 }
 
-.add-to-cart:active{
+.add-carrinho:active{
     background-color: #e62753;
     color: #ffe6ec;
     border: #fa033d;
@@ -195,7 +195,7 @@ body {
     float: center;
 }
 
-.cart {
+.carrinho {
     background: #ff4d6d;
     padding: 1rem;
     border-radius: 8px;
@@ -206,43 +206,43 @@ body {
     color: white;
 }
 
-.cart-header {
+.carrinho-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
 }
 
-#cart-icon img {
+#carrinho-icon img {
     height: 50px;
     transition: transform 0.3s ease;
 }
 
-#cart-icon img:hover {
+#carrinho-icon img:hover {
     transform: scale(1.1);
 }
 
-#cart-title {
+#carrinho-title {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
 }
 
-.cart ul {
+.carrinho ul {
     list-style-type: none;
     padding: 0;
     margin: 1rem 0;
     text-align: left;
 }
 
-.cart li {
+.carrinho li {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 0;
     border-bottom: 1px solid #ffd7e3;
 }
 
-.cart li button {
+.carrinho li button {
     background-color: #e62753;
     color: white;
     border: none;
@@ -252,7 +252,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.cart li button:hover {
+.carrinho li button:hover {
     background-color: #ff003c;
 }
 

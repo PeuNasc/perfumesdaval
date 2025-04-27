@@ -58,7 +58,7 @@ body {
     text-transform: uppercase;
 }
 
-.cart {
+.carrinho {
     max-width: 800px;
     margin: 30px auto;
     background-color: #333333;
@@ -68,31 +68,31 @@ body {
     color: #e0e0e0;
 }
 
-.cart h2 {
+.carrinho h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     text-align: center;
     color: #ffb74d;
 }
 
-.cart ul {
+.carrinho ul {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
 }
 
-.cart li {
+.carrinho li {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #2a4f59;
 }
 
-.cart li:last-child {
+.carrinho li:last-child {
     border-bottom: none;
 }
 
-.cart button {
+.carrinho button {
     background-color: #4f6d7a;
     color: white;
     border: none;
@@ -102,11 +102,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.cart button:hover {
+.carrinho button:hover {
     background-color: #2a4f59;
 }
 
-.cart p {
+.carrinho p {
     font-size: 1.2rem;
     font-weight: bold;
     text-align: right;
@@ -195,12 +195,12 @@ body {
         font-size: 2rem;
     }
 
-    .cart {
+    .carrinho {
         max-width: 700px;
         padding: 15px;
     }
 
-    .cart h2 {
+    .carrinho h2 {
         font-size: 1.5rem;
     }
 
@@ -223,26 +223,26 @@ body {
         font-size: 1.8rem;
     }
 
-    .cart {
+    .carrinho {
         max-width: 90%;
         margin: 20px auto;
         padding: 10px;
     }
 
-    .cart h2 {
+    .carrinho h2 {
         font-size: 1.3rem;
     }
 
-    .cart p {
+    .carrinho p {
         font-size: 1rem;
     }
 
-    .cart li {
+    .carrinho li {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .cart li button {
+    .carrinho li button {
         margin-top: 5px;
     }
 
@@ -269,20 +269,20 @@ body {
         margin-right: 60px;
     }
 
-    .cart {
+    .carrinho {
         padding: 10px;
     }
 
-    .cart h2 {
+    .carrinho h2 {
         font-size: 1.2rem;
     }
 
-    .cart li {
+    .carrinho li {
         flex-direction: column;
         gap: 5px;
     }
 
-    .cart li button {
+    .carrinho li button {
         width: 100%;
     }
 

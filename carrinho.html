@@ -16,12 +16,11 @@
                 <img id="imgacessibilidade" src="iconeacessibilididade.png" alt="Ativar Acessibilidade">
                 </button>
         </div>
-        
     </header>
-    <section id="cart" class="cart">
+    <section id="carrinho" class="carrinho">
         <h2>Itens no Carrinho</h2>
-        <ul id="cart-items"></ul>
-        <p>Total: R$ <span id="cart-total">0.00</span></p>
+        <ul id="itens-carrinho"></ul>
+        <p>Total: R$ <span id="carrinho-total">0.00</span></p>
     </section>
      <section id="checkout">
         <button id="whatsapp-button" class="whatsapp-btn">
@@ -39,101 +38,101 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const cart = [];
-            const cartItems = document.getElementById("cart-items");
-            const cartTotal = document.getElementById("cart-total");
-
-            document.querySelectorAll(".add-to-cart").forEach(button => {
-                button.addEventListener("click", () => {
-                    const name = button.getAttribute("data-name");
-                    const price = parseFloat(button.getAttribute("data-price"));
-
-                    const existingItem = cart.find(item => item.name === name);
-
-                    if (existingItem) {
-                        existingItem.quantity += 1;
-                    } else {
-                        cart.push({ name, price, quantity: 1 });
-                    }
-
-                    updateCart();
-                    saveCartToLocalStorage();
-                });
-            });
-
-            function updateCart() {
-                cartItems.innerHTML = "";
-
+            const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+            const carrinhoDropdown = document.getElementById("carrinho-dropdown");
+            const carrinhoItems = document.getElementById("itens-carrinho");
+            const carrinhoTotal = document.getElementById("carrinho-total");
+    
+   
+            function updateSacola() {
+                carrinhoItems.innerHTML = "";
                 let total = 0;
-
-                cart.forEach((item, index) => {
-                    total += item.price * item.quantity;
+    
+                carrinho.forEach((item, index) => {
+                    total += item.preco * item.quantidade;
+    
+                    
                     const li = document.createElement("li");
-                    li.textContent = `${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`;
-
+                    li.textContent = `${item.nome} (x${item.quantidade}) - R$ ${(item.preco * item.quantidade).toFixed(2)}`;
+    
+             
                     const removeButton = document.createElement("button");
                     removeButton.textContent = "Remover";
+                    removeButton.style.marginLeft = "10px";
                     removeButton.addEventListener("click", () => {
-                        if (item.quantity > 1) {
-                            item.quantity -= 1;
+                        if (item.quantidade > 1) {
+                            item.quantidade -= 1;
                         } else {
-                            cart.splice(index, 1);
+                            carrinho.splice(index, 1);
                         }
-
-                        updateCart();
-                        saveCartToLocalStorage();
+                        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+                        updateSacola();
                     });
-
+    
+                    
                     li.appendChild(removeButton);
-                    cartItems.appendChild(li);
+    
+                    
+                    carrinhoItems.appendChild(li);
                 });
-
-                cartTotal.textContent = total.toFixed(2);
+    
+                carrinhoTotal.textContent = total.toFixed(2);
             }
-
-            function saveCartToLocalStorage() {
-                localStorage.setItem("cart", JSON.stringify(cart));
-            }
-
-            function loadCartFromLocalStorage() {
-                const storedCart = JSON.parse(localStorage.getItem("cart"));
-                if (storedCart) {
-                    storedCart.forEach(item => cart.push(item));
-                    updateCart();
+    
+           
+            function addToCarrinho(nome, preco) {
+                const existingItem = carrinho.find(item => item.nome === nome);
+    
+                if (existingItem) {
+                    existingItem.quantidade += 1;
+                } else {
+                    carrinho.push({ nome, preco, quantidade: 1 });
                 }
+    
+                localStorage.setItem("carrinho", JSON.stringify(carrinho));
+                updateSacola();
             }
-
-            loadCartFromLocalStorage();
+    
+          
+            updateSacola();
+    
+            
+            document.querySelectorAll(".add-carrinho").forEach(button => {
+                button.addEventListener("click", () => {
+                    const nome = button.getAttribute("data-nome-produto");
+                    const preco = parseFloat(button.getAttribute("data-preco-produto"));
+    
+                    addToCarrinho(nome, preco);
+                    alert("Produto adicionado à sacola!");
+                });
+            });
         });
     </script>
-
-   
-
     <script>
         document.getElementById("whatsapp-button").addEventListener("click", function() {
-    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    if (cartItems.length === 0) {
+    const carrinhoItems = JSON.parse(localStorage.getItem("carrinho")) || [];
+    if (carrinhoItems.length === 0) {
         alert("Seu carrinho está vazio. Adicione itens antes de enviar o pedido.");
         return;
     }
 
-    let cartMessage = "Olá! Tudo bem?\n\n";
-    cartMessage += "Por favor, preencha as informações abaixo para finalizar seu pedido:\n\n";
-    cartMessage += "*Seu Nome:* [Digite aqui]\n";
-    cartMessage += "*Endereço:* [Digite aqui]\n";
-    cartMessage += "*Forma de Pagamento:* [Digite aqui]\n\n";
-    cartMessage += "*Resumo do Pedido:*\n\n";
+    let carrinhoMessage = "Olá! Tudo bem?\n\n";
+    carrinhoMessage += "Por favor, preencha as informações abaixo para finalizar seu pedido:\n\n";
+    carrinhoMessage += "*Seu Nome:* [Digite aqui]\n";
+    carrinhoMessage += "*Endereço:* [Digite aqui]\n";
+    carrinhoMessage += "*Forma de Pagamento:* [Digite aqui]\n\n";
+    carrinhoMessage += "*Resumo do Pedido:*\n\n";
 
-    cartItems.forEach(item => {
-        cartMessage += `- ${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
+    carrinhoItems.forEach(item => {
+        carrinhoMessage += `- ${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
     });
 
-    const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
-    cartMessage += `\n*Total:* R$ ${total}\n\n`;
-    cartMessage += "Obrigado por escolher *PERFUMES DA VAL*! Se precisar de algo, estamos aqui para ajudar.";
+    const total = carrinhoItems.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+    carrinhoMessage += `\n*Total:* R$ ${total}\n\n`;
+    carrinhoMessage += "Obrigado por escolher *PERFUMES DA VAL*! Se precisar de algo, estamos aqui para ajudar.";
 
     const phoneNumber = "557581701297";
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(cartMessage)}`;
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(carrinhoMessage)}`;
     window.open(whatsappLink, "_blank");
 });
     </script>
