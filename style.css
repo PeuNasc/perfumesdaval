@@ -316,7 +316,7 @@ body {
 
 @media (max-width: 1024px) {
     .produtos-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: 1fr;
     }
 }
 
