@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Tangerine:wght@400;700&display=swap');
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;;
     margin: 0;
@@ -109,7 +114,7 @@ body {
     font-size:xx-large;
 }
 
-.produtos-grid {
+.product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
@@ -122,7 +127,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(158, 32, 32, 0.1);
 }
-
 
 .produto img {
     max-width: 100%;
@@ -313,98 +317,79 @@ body {
     color: #ffffff;
 }
 
-
-@media (max-width: 1024px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-
-    .header-content h1 {
-        font-size: 2rem;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .container {
-        padding: 0 1rem;
-    }
-
-    .produto-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .produtos h2 {
-        font-size: 1.8rem;
-    }
-}
-
 @media (max-width: 768px) {
     .header {
-        padding: 0.5rem 1rem;
-    }
+       flex-direction: column;
+       text-align: center;
+       padding: 1rem;
+   }
 
-    .header-content h1 {
-        font-size: 1.8rem;
-    }
+   .navbar {
+       flex-direction: column;
+       gap: 0.5rem;
+       margin-top: 1rem;
+   }
 
-    .nav-links a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
+   .container {
+       padding: 0 10px;
+   }
 
-    .produto img {
-        max-width: 90%;
-    }
+   .produtos-grid {
+       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   }
 
-    .produto-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .produtos {
-        padding: 1rem;
-    }
-
-    .footer p {
-        font-size: 0.9rem;
+    #sacola {
+        height: 40px;
+        width: 90px;
     }
 }
-
 @media (max-width: 480px) {
-    .header-content h1 {
-        font-size: 1.5rem;
-        text-align: center;
+   .header-content h1 {
+       font-size: 2rem;
+   }
+
+   .nav-links {
+       flex-direction: column;
+       gap: 0.5rem;
+   }
+
+   .nav-links a {
+       font-size: 0.9rem;
+       padding: 0.4rem 0.8rem;
+   }
+
+   .produtos {
+       padding: 1rem;
+   }
+
+   .produtos h2 {
+       font-size: 1.8rem;
+   }
+
+   .produto h3 {
+       font-size: 1rem;
+   }
+
+   .produto p, #preçoperfume {
+       font-size: 0.8rem;
+   }
+
+   .add-carrinho {
+       height: 2.5rem;
+       width: 100%;
+       font-size: 0.9rem;
+   }
+
+   #sacola {
+        height: 40px;
+        width: 90px;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+   .footer p, .footer a {
+       font-size: 0.9rem;
+   }
 
-    .add-carrinho {
-        font-size: 0.9rem;
-        width: 100%;
-        padding: 0.5rem;
-    }
-
-    .produto img {
-        max-width: 100%;
-    }
-
-    .produtos h2 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    #carrinho-icon img {
-        height: 30px;
-    }
-
-    .footer p {
-        font-size: 0.8rem;
-    }
+   #rodape, #direitosautorais {
+       font-size: 0.9rem;
+   }
 }

@@ -162,40 +162,51 @@ body {
 }
 
 .footer {
-    position: fixed;
-    margin-top: 1rem;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     background-color: #ff4d6d; 
     color: white;
     text-align: center;
-    padding: 10px 0;
-    
-    
+    padding: 1rem 0rem;  
+    font-size: 1rem; 
+    border-top: 3px solid #ffd7e3; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
 
 .footer p {
     margin: 0;
+    font-size: 1.1rem; 
+    font-weight: 300;
+    letter-spacing: 0.5px; 
 }
 
+
 .footer a {
-    color: #ffd7e3;
+    color: #ffd7e3; 
     text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500; 
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
+
 
 .footer a:hover {
     text-decoration: underline;
+    color: #fff; 
+    transform: scale(1.1); 
+}
+
+
+.footer:hover {
+    background-color: #ff3366;
 }
 
 @media (max-width: 768px) {
     .header-content h1 {
-        font-size: 48px;
-        padding-top: 15px;
+        font-size: 40px;
     }
 
     .carrinho {
-        margin: 20px 15px;
+        max-width: 90%;
         padding: 15px;
     }
 
@@ -203,39 +214,29 @@ body {
         font-size: 1.5rem;
     }
 
-    .carrinho li {
-        flex-direction: row; 
-        align-items: center; 
-        flex-wrap: wrap; 
-        gap: 8px;
-    }
-
-    .carrinho button {
-        padding: 8px 12px;
-        margin-left: 10px; 
+    .carrinho p {
+        font-size: 1rem;
     }
 
     .whatsapp-btn {
-        width: 80%;
-        padding: 12px 20px;
+        width: 50%;
         font-size: 1rem;
-        justify-content: center;
+        padding: 12px 20px;
     }
 
     #deixe-feedback {
-        width: 80%;
-        padding: 10px 20px;
         font-size: 1rem;
+        padding: 8px 20px;
     }
 }
-
 @media (max-width: 480px) {
     .header-content h1 {
-        font-size: 36px;
+        font-size: 30px;
+        padding-top: 5px;
     }
 
     .carrinho {
-        margin: 15px 10px;
+        max-width: 95%;
         padding: 10px;
     }
 
@@ -244,22 +245,34 @@ body {
     }
 
     .carrinho li {
-        font-size: 0.9rem; 
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carrinho li button {
+        margin-top: 10px;
+    }
+
+    .carrinho p {
+        font-size: 0.9rem;
     }
 
     .whatsapp-btn {
-        width: 90%;
+        width: 80%;
+        font-size: 0.9rem;
         padding: 10px 15px;
     }
 
     #deixe-feedback {
-        width: 90%;
+        width: 80%;
+        font-size: 0.9rem;
         padding: 8px 15px;
     }
 
     #botao_acessibilidade1 {
         top: 10px;
         right: 10px;
+        padding: 8px;
     }
 
     #imgacessibilidade {

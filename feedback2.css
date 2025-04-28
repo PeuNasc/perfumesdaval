@@ -193,3 +193,81 @@ button:hover {
 #direitosautorais {
     color: #ffffff;
 }
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+ 
+    .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    #imgacessibilidade {
+        height: 25px;
+        width: 25px;
+    }
+
+    main {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    input, textarea, button {
+        font-size: 15px;
+    }
+
+    .footer p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+ 
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+ 
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    #imgacessibilidade {
+        height: 20px;
+        width: 20px;
+    }
+
+    main {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    input, textarea, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
