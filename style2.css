@@ -164,13 +164,6 @@ body {
     width: 10rem;
 }
 
-.add-carrinho:active {
-    background-color: #4f6d7a;
-    color: #ffe6ec;
-    border: #c1c1c1;
-    height: 3rem;
-    width: 10rem;
-}
 
 .footer {
     background-color: #333333;

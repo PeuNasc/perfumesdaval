@@ -170,13 +170,6 @@ body {
     width: 10rem;
 }
 
-.add-carrinho:active{
-    background-color: #e62753;
-    color: #ffe6ec;
-    border: #fa033d;
-    height: 3rem;
-    width: 10rem;
-}
 
 #sacola{
     color: white;
