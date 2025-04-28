@@ -162,6 +162,11 @@ body {
 }
 
 .footer {
+    position: fixed;
+    margin-top: 1rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #ff4d6d; 
     color: white;
     text-align: center;
