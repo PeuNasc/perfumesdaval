@@ -6,13 +6,12 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
     color: #333333;
 }
-
 
 .header {
     display: flex;
@@ -42,7 +41,7 @@ body {
     letter-spacing: 1px;
 }
 
-.nome-loja{
+.nome-loja {
     text-decoration: none;
 }
 
@@ -97,7 +96,7 @@ body {
     padding: 0 15px;
 }
 
-.produtos{
+.produtos {
     background: #ffffff;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -105,13 +104,13 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.produtos h2{
+.produtos h2 {
     color: #ff002f;
     margin-top: 0;
     margin-bottom: 1rem;
     padding-top: 0;
     font-family: "Tangerine";
-    font-size:xx-large;
+    font-size: xx-large;
 }
 
 .product-grid {
@@ -134,14 +133,11 @@ body {
     margin-bottom: 1rem;
 }
 
-
 .produto h3 {
     color: #ff4d6d;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     font-family: DMSans, Helvetica, Arial, sans-serif;
-    
-    
 }
 
 .produto p {
@@ -149,20 +145,21 @@ body {
     font-size: 0.9rem;
 }
 
-#preçoperfume{
+#preçoperfume {
     font-size: x-large;
-    font-family: arial, sans-serif;
+    font-family: Arial, sans-serif;
     color: #fa033d;
 }
 
-.add-carrinho{
+.add-carrinho {
     background-color: #e62753;
     color: #ffe6ec;
     border: #fa033d;
     height: 2rem;
     width: none;
 }
-.add-carrinho:hover{
+
+.add-carrinho:hover {
     background-color: #ff003c;
     color: #ffe6ec;
     border: #fa033d;
@@ -170,8 +167,7 @@ body {
     width: 10rem;
 }
 
-
-#sacola{
+#sacola {
     color: white;
     background-color: #c4304b;
     border: rgb(82, 67, 67);
@@ -180,14 +176,15 @@ body {
     height: 45px;
     width: 100px;
     float: center;
-    
 }
-#sacola:hover{
+
+#sacola:hover {
     background-color: #fa033d;
     height: 45px;
     float: center;
 }
-#sacola:active{
+
+#sacola:active {
     height: 60px;
     float: center;
 }
@@ -260,53 +257,47 @@ body {
     color: #ffd7e3;
 }
 
-
 .footer {
-    background-color: #ff4d6d; 
+    background-color: #ff4d6d;
     color: white;
     text-align: center;
-    padding: 1rem 0rem; 
-    font-size: 1rem; 
-    border-top: 3px solid #ffd7e3; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 1rem 0rem;
+    font-size: 1rem;
+    border-top: 3px solid #ffd7e3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 .footer p {
     margin: 0;
-    font-size: 1.1rem; 
+    font-size: 1.1rem;
     font-weight: 300;
-    letter-spacing: 0.5px; 
+    letter-spacing: 0.5px;
 }
-
 
 .footer a {
-    color: #ffd7e3; 
+    color: #ffd7e3;
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: 500; 
-    transition: color 0.3s ease, transform 0.3s ease; 
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
-
 
 .footer a:hover {
     text-decoration: underline;
-    color: #fff; 
-    transform: scale(1.1); 
+    color: #fff;
+    transform: scale(1.1);
 }
-
 
 .footer:hover {
     background-color: #ff3366;
 }
 
-
-#rodape{
+#rodape {
     color: #fff5f8;
     font-family: 'Playfair Display';
 }
 
-#direitosautorais{
+#direitosautorais {
     color: #ffffff;
 }
 
@@ -327,7 +318,7 @@ body {
        padding: 0 10px;
    }
 
-   .produtos-grid {
+   .product-grid {
        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
    }
 
@@ -336,6 +327,7 @@ body {
         width: 90px;
     }
 }
+
 @media (max-width: 480px) {
    .header-content h1 {
        font-size: 2rem;
