@@ -373,16 +373,18 @@ body {
 
     .add-carrinho {
         height: 2.5rem;
-        height: 50px;
-        width: 175px;
+        width: 100%;
+        max-width: 150px;
         font-size: 0.9rem;
     }
 
-    .add-carrinho.hover {
-        height: 2.5rem;
-        height: 50px;
-        width: 175px;
-        font-size: 0.9rem;
+    .add-carrinho:hover {
+        background-color: #2a4f59;
+        color: #ffe6ec;
+        border: #c1c1c1;
+        height: 3rem;
+        width: 100%;
+        max-width: 200px;
     }
 
     #sacola {
