@@ -152,7 +152,10 @@ body {
     background-color: #4f6d7a;
     color: #ffe6ec;
     border: #c1c1c1;
-    height: 2rem;
+    height: 3rem;
+    border-radius: 15px;
+    width: 10rem;
+    cursor: pointer;
     width: none;
 }
 
@@ -209,13 +212,8 @@ body {
 
 #sacola:hover {
     background-color: #2a4f59;
-    height: 45px;
     float: center;
-}
-
-#sacola:active {
-    height: 60px;
-    float: center;
+    cursor: pointer;
 }
 
 .carrinho {

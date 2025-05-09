@@ -155,14 +155,16 @@ body {
     background-color: #e62753;
     color: #ffe6ec;
     border: #fa033d;
-    height: 2rem;
-    width: none;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 15px;
 }
 
 .add-carrinho:hover {
     background-color: #ff003c;
     color: #ffe6ec;
     border: #fa033d;
+    cursor: pointer;
     height: 3rem;
     width: 10rem;
 }
@@ -180,14 +182,10 @@ body {
 
 #sacola:hover {
     background-color: #fa033d;
-    height: 45px;
     float: center;
+    cursor: pointer;
 }
 
-#sacola:active {
-    height: 60px;
-    float: center;
-}
 
 .carrinho {
     background: #ff4d6d;

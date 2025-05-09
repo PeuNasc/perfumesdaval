@@ -313,78 +313,78 @@
         </section>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-            const carrinhoDropdown = document.getElementById("menu-carrinho");
-            const carrinhoItems = document.getElementById("itens-carrinho");
-            const carrinhoTotal = document.getElementById("carrinho-total");
-    
-   
-            function updateSacola() {
-                carrinhoItems.innerHTML = "";
-                let total = 0;
-    
-                carrinho.forEach((item, index) => {
-                    total += item.preco * item.quantidade;
-    
-                    
-                    const li = document.createElement("li");
-                    li.textContent = `${item.nome} (x${item.quantidade}) - R$ ${(item.preco * item.quantidade).toFixed(2)}`;
-    
-             
-                    const removeButton = document.createElement("button");
-                    removeButton.textContent = "Remover";
-                    removeButton.style.marginLeft = "10px";
-                    removeButton.addEventListener("click", () => {
-                        if (item.quantidade > 1) {
-                            item.quantidade -= 1;
-                        } else {
-                            carrinho.splice(index, 1);
-                        }
-                        localStorage.setItem("carrinho", JSON.stringify(carrinho));
-                        updateSacola();
-                    });
-    
-                    
-                    li.appendChild(removeButton);
-    
-                    
-                    carrinhoItems.appendChild(li);
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+        const carrinhoDropdown = document.getElementById("menu-carrinho");
+        const carrinhoItems = document.getElementById("itens-carrinho");
+        const carrinhoTotal = document.getElementById("carrinho-total");
+
+        function updateSacola() {
+            carrinhoItems.innerHTML = "";
+            let total = 0;
+
+            carrinho.forEach((item, index) => {
+                total += item.preco * item.quantidade;
+
+                const li = document.createElement("li");
+                li.textContent = `${item.nome} (x${item.quantidade}) - R$ ${(item.preco * item.quantidade).toFixed(2)}`;
+
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "Remover";
+                removeButton.style.marginLeft = "10px";
+                removeButton.addEventListener("click", () => {
+                    if (item.quantidade > 1) {
+                        item.quantidade -= 1;
+                    } else {
+                        carrinho.splice(index, 1);
+                    }
+                    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+                    updateSacola();
                 });
-    
-                carrinhoTotal.textContent = total.toFixed(2);
+
+                li.appendChild(removeButton);
+                carrinhoItems.appendChild(li);
+            });
+
+            carrinhoTotal.textContent = total.toFixed(2);
+        }
+
+        function addToCarrinho(nome, preco) {
+            const existingItem = carrinho.find(item => item.nome === nome);
+
+            if (existingItem) {
+                existingItem.quantidade += 1;
+            } else {
+                carrinho.push({ nome, preco, quantidade: 1 });
             }
-    
-           
-            function addToCarrinho(nome, preco) {
-                const existingItem = carrinho.find(item => item.nome === nome);
-    
-                if (existingItem) {
-                    existingItem.quantidade += 1;
-                } else {
-                    carrinho.push({ nome, preco, quantidade: 1 });
-                }
-    
-                localStorage.setItem("carrinho", JSON.stringify(carrinho));
-                updateSacola();
-            }
-    
-          
+
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
             updateSacola();
-    
-            
-            document.querySelectorAll(".add-carrinho").forEach(button => {
-                button.addEventListener("click", () => {
-                    const nome = button.getAttribute("data-nome-produto");
-                    const preco = parseFloat(button.getAttribute("data-preco-produto"));
-    
-                    addToCarrinho(nome, preco);
-                    alert("Produto adicionado à sacola!");
-                });
+        }
+
+        updateSacola();
+
+        document.querySelectorAll(".add-carrinho").forEach(button => {
+            button.addEventListener("click", () => {
+                const nome = button.getAttribute("data-nome-produto");
+                const preco = parseFloat(button.getAttribute("data-preco-produto"));
+
+                addToCarrinho(nome, preco);
+                alert("Produto adicionado à sacola!");
             });
         });
-    </script>
+
+        const carrinhoButton = document.getElementById("sacola");
+        carrinhoButton.addEventListener("click", (e) => {
+            if (carrinho.length === 0) {
+                e.preventDefault();
+                alert("O carrinho está vazio. Adicione produtos antes de continuar.");
+            }
+        });
+    });
+</script>
+
     <script src="tema.js"></script>
 </body>
 </html>
