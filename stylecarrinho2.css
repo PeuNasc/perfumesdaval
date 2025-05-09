@@ -243,15 +243,17 @@ body {
     }
 
     .whatsapp-btn {
-        width: 80%;
-        font-size: 0.9rem;
-        padding: 10px 15px;
+        width: 90%; 
+        font-size: 1.2rem;
+        padding: 15px 20px; 
+        border-radius: 15px;
     }
 
     #deixe-feedback {
         width: 80%;
-        font-size: 0.9rem;
-        padding: 8px 15px;
+        font-size: 1.2rem; 
+        padding: 15px 20px; 
+        border-radius: 15px;
     }
 
     #botao_acessibilidade1 {
