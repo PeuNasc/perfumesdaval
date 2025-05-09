@@ -124,10 +124,11 @@
     carrinhoMessage += "*Resumo do Pedido:*\n\n";
 
     carrinhoItems.forEach(item => {
-        carrinhoMessage += `- ${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
-    });
+    carrinhoMessage += `- ${item.nome} (x${item.quantidade}) - R$ ${(item.preco * item.quantidade).toFixed(2)}\n`;
+});
 
-    const total = carrinhoItems.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+
+    const total = carrinhoItems.reduce((sum, item) => sum + item.preco * item.quantidade, 0).toFixed(2);
     carrinhoMessage += `\n*Total:* R$ ${total}\n\n`;
     carrinhoMessage += "Obrigado por escolher *PERFUMES DA VAL*! Se precisar de algo, estamos aqui para ajudar.";
 
