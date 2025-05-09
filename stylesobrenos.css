@@ -147,6 +147,10 @@ body {
         margin-top: 1rem;
     }
 
+    .navbar a{
+        background-color: #ff3366;
+    }
+
     .conteudo-sobre {
         padding: 1.5rem;
     }
@@ -166,16 +170,20 @@ body {
     }
 }
 @media (max-width: 480px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
+    .header-content h1 {
+        font-size: 3rem;
     }
- 
-    .navbar {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;  
+        padding: 0.3rem 0.6rem;
+        background-color: #ff3366;
     }
 
     #imgacessibilidade {

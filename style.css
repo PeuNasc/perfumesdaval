@@ -314,6 +314,10 @@ body {
        margin-top: 1rem;
    }
 
+   .navbar a{
+        background-color: #ff3366;
+    }
+
    .container {
        padding: 0 10px;
    }
@@ -342,6 +346,7 @@ body {
     .nav-links a {
         font-size: 1rem;  
         padding: 0.3rem 0.6rem;
+        background-color: #ff3366;
     }
 
     .produtos {

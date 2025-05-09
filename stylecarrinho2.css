@@ -217,8 +217,7 @@ body {
 }
 @media (max-width: 480px) {
     .header-content h1 {
-        font-size: 30px;
-        padding-top: 5px;
+        font-size: 3rem;
     }
 
     .carrinho {

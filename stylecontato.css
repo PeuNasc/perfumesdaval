@@ -188,6 +188,10 @@ body {
         margin-top: 1rem;
     }
 
+    .navbar a{
+        background-color: #ff3366;
+    }
+
     .contact {
         padding: 1.5rem;
     }
@@ -200,17 +204,19 @@ body {
 }
 @media (max-width: 480px) {
     .header-content h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
- 
+
     .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 1rem;
     }
- 
+
     .nav-links a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 1rem;  
+        padding: 0.3rem 0.6rem;
+        background-color: #ff3366;
     }
 
     #imgacessibilidade {
