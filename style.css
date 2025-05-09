@@ -329,52 +329,61 @@ body {
 }
 
 @media (max-width: 480px) {
-   .header-content h1 {
-       font-size: 2rem;
-   }
+    .header-content h1 {
+        font-size: 2rem;
+    }
 
-   .nav-links {
-       flex-direction: column;
-       gap: 0.5rem;
-   }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 0.5rem;
+    }
 
-   .nav-links a {
-       font-size: 0.9rem;
-       padding: 0.4rem 0.8rem;
-   }
+    .nav-links a {
+        font-size: 0.8rem; 
+        padding: 0.3rem 0.6rem;
+    }
 
-   .produtos {
-       padding: 1rem;
-   }
+    .produtos {
+        padding: 1rem;
+    }
 
-   .produtos h2 {
-       font-size: 1.8rem;
-   }
+    .produtos h2 {
+        font-size: 1.8rem;
+    }
 
-   .produto h3 {
-       font-size: 1rem;
-   }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
 
-   .produto p, #preçoperfume {
-       font-size: 0.8rem;
-   }
+    .produto h3 {
+        font-size: 2rem;
+    }
 
-   .add-carrinho {
-       height: 2.5rem;
-       width: 100%;
-       font-size: 0.9rem;
-   }
+    .produto p, #preçoperfume {
+        font-size: 1.2rem;
+    }
 
-   #sacola {
+    #preçoperfume {
+        font-size: 2rem;
+    }
+
+    .add-carrinho {
+        height: 2.5rem;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    #sacola {
         height: 40px;
         width: 90px;
     }
 
-   .footer p, .footer a {
-       font-size: 0.9rem;
-   }
+    .footer p, .footer a {
+        font-size: 0.9rem;
+    }
 
-   #rodape, #direitosautorais {
-       font-size: 0.9rem;
-   }
+    #rodape, #direitosautorais {
+        font-size: 0.9rem;
+    }
 }
