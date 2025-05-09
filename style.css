@@ -378,6 +378,13 @@ body {
         font-size: 0.9rem;
     }
 
+    .add-carrinho.hover {
+        height: 2.5rem;
+        height: 50px;
+        width: 175px;
+        font-size: 0.9rem;
+    }
+
     #sacola {
         height: 40px;
         width: 90px;
