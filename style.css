@@ -373,7 +373,8 @@ body {
 
     .add-carrinho {
         height: 2.5rem;
-        width: 100%;
+        height: 50px;
+        width: 175px;
         font-size: 0.9rem;
     }
 
